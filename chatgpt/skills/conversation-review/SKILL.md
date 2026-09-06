@@ -5,7 +5,7 @@ description: "[TODO: 請填入 conversation-review 的用途與使用時機；�
 
 # Conversation Review
 
-**版本：v1.1｜2026-07-19**
+**版本：v1.2｜2026-09-06**
 
 將目前可見的討論整理成可靠的階段性檢視，不要把它誤寫成跨 AI 交班稿。
 
@@ -69,7 +69,7 @@ description: "[TODO: 請填入 conversation-review 的用途與使用時機；�
 提出一至三個最有價值的後續動作。
 
 ### 11. Configuration / Workflow Delta
-若本次涉及 AI 設定或工作流，列出：變更物件、舊做法、新做法、是否已在 UI 生效、受影響頁面／Skills、以及尚需 Claude 處理的 canonical 更新。若無，寫「本次無設定或工作流變更」。
+若本次涉及 AI 設定或工作流，列出：變更物件、舊做法、新做法、是否已在 UI 生效、受影響頁面／Skills、以及尚需由當次主責 AI 處理的 canonical 更新。若無，寫「本次無設定或工作流變更」。
 
 ### 12. Knowledge Delta 候選
 只列可能值得長期保存的新增決策、修正、方法或風險；若沒有，寫「目前無需沉澱」。
@@ -80,4 +80,4 @@ description: "[TODO: 請填入 conversation-review 的用途與使用時機；�
 - 使用者明確要求交給 Claude 或 Cowork 時，改用 `claude-handoff`。
 - 使用者要求保存到 Notion 時，可同時使用 `notion-capture`。
 - 使用者只說「幫我交班」但未指定接手者時，改用 `work-handoff`。
-- 若收斂結果會影響 Architecture、Setup Log、instruction snapshot 或 canonical，完成 review 後改用 `claude-handoff` 產生變更契約。
+- 若收斂結果會影響 Architecture、Setup Log、instruction snapshot 或 canonical，記錄 Configuration Delta 與待處理事項。使用者要求保存時可使用 `notion-capture`；只有確實交給 Claude 接手時才使用 `claude-handoff`，不因檢視到 Notion 或正式文件變更就自動交班。

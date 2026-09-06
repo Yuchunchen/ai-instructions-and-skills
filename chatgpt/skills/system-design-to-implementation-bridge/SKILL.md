@@ -5,6 +5,8 @@ description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途�
 
 # System Design to Implementation Bridge
 
+**來源修訂：2026-09-06｜Chat／Work／Claude 分工更新；原文未標語意版本**
+
 ## 中文名稱
 
 系統設計到實作橋接
@@ -127,7 +129,7 @@ description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途�
 
 ### Claude Handoff
 
-若需要 Claude／Cowork 修改正式文件、Notion、Architecture、INDEX、Registry 或 Canonical，使用 `claude-handoff`。
+只有確實由 Claude 承接長文件整合、程式工作、獨立第二意見或其主責文件更新時，才使用 `claude-handoff`。Notion 日常維護預設由 ChatGPT Work 承接，Claude 可更新其已授權主責工作的對應頁面；不因正式文件或 Notion 變更自動交班。
 
 本 Skill決定「應該交給誰及交付什麼」，但不重複產生完整 Claude Handoff。
 
@@ -141,7 +143,7 @@ description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途�
 4. 不把「建立文件、看板或資料庫」本身當成實作完成。
 5. 每個新產物都必須有 Owner、Trigger、Input、Output 與維護方式。
 6. 每項正式內容只能有一個 Canonical Source。
-7. ChatGPT 討論稿、Claude 正式稿與 Notion Canonical 必須區分。
+7. 討論稿、工作稿與已核定正式稿必須區分；GitHub 保存 Instructions／Skills Source，Notion 保存 Governance／Architecture／Registry，產品設定介面另驗證 Runtime。
 8. 不假設不同 Thread、Project 或 AI 自動共享全部脈絡。
 9. 交接必須透過明確摘要、Handoff 或正式參考資料。
 10. 先完成最小可行試運轉，再擴充完整系統。
@@ -151,7 +153,7 @@ description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途�
 14. 若無人維護，優先採用更簡單的操作方式。
 15. 不因可以自動化就立即自動化。
 16. 先證明人工或半人工流程可運作，再評估自動化。
-17. 不自行修改正式 Architecture、Notion 或 Canonical。
+17. 本 Skill 負責落地設計，不自行擴張執行範圍；後續正式 Architecture、Notion 或 Canonical 更新由已授權的當次主責 AI 依維護規則完成並回讀。
 18. 不宣稱尚未執行的步驟已完成。
 19. 使用繁體中文與台灣用語。
 20. 預設不用 Markdown 表格。
@@ -303,15 +305,18 @@ Design Readiness 只能給出三種判斷：
 * Claude 負責長文件整合、正式版本與一致性
 * 使用者負責裁定
 
-### Mode D｜Claude Cowork 執行
+### Mode D｜ChatGPT Work／Claude Cowork 執行
 
 適合：
 
 * 架構已明確
 * 需要多步驟檔案或知識工作
-* 需要更新正式文件、Architecture、INDEX 或 Registry
+* 日常 Notion 整理、Architecture 或 Registry 維護，預設由 ChatGPT Work 承接
+* Claude 主責的長文件或程式工作，可由其可用介面更新對應 Notion 頁面
 
-### Mode E｜Codex 技術實作
+先指定本次主責 AI，確認工具、授權與回讀方式；INDEX／CLAUDE.md 檔案操作沿用適用專案指示。
+
+### Mode E｜Claude Code／Codex 技術實作
 
 適合：
 
@@ -632,8 +637,8 @@ Project、Thread、文件、頁面或資料夾。
 * 直接開始 Pilot
 * 使用 `thread-handoff`
 * 使用 `claude-handoff`
-* 交給 Codex 執行技術工作
-* 交給 Claude Cowork 執行正式修改
+* 程式工作預設考慮 Claude／Claude Code；使用者指定或既有執行環境適合時由 Codex 接續
+* 日常 Notion 維護交給 ChatGPT Work；Claude 主責工作所需的對應頁面更新可由 Claude 完成
 * 使用 Iterative Work Planner 做完整拆解
 * 回到 `unknown-pass`
 * 由使用者先做架構裁定
@@ -896,12 +901,15 @@ Project、Thread、文件、頁面或資料夾。
 * 已定義清楚的多步驟知識工作
 * 產生完整交付物
 * 執行有明確輸入、輸出與驗證的任務
+* 多來源資料整理與日常 Notion 維護；在授權範圍內更新受影響頁面並回讀
 
 不適合：
 
 * 取代未完成的策略與架構討論
 
-## Codex
+## Claude Code／Codex
+
+程式工作預設考慮 Claude／Claude Code；Codex 可依使用者指定或既有執行環境承接。
 
 適合：
 
@@ -926,7 +934,8 @@ Project、Thread、文件、頁面或資料夾。
 * 長文件整合
 * 正式內容整理
 * 名詞與版本一致性
-* Canonical 草稿維護
+* 主責長文件的正式稿與版本一致性
+* 使用者需要時提供獨立第二意見；不作為所有工作的必經核准
 
 需要注意：
 
@@ -939,7 +948,8 @@ Project、Thread、文件、頁面或資料夾。
 
 * 按 Implementation Plan 修改正式文件
 * 管理多步驟落地工作
-* 維護 Architecture、INDEX、Registry、Canonical
+* 完成主責長文件或程式工作時，更新已授權的對應 Notion 頁面並回讀；日常 Notion 維護預設由 ChatGPT Work 承接
+* 既有 INDEX／CLAUDE.md 檔案工作依專案專屬流程
 
 需要注意：
 
@@ -1049,7 +1059,7 @@ Project、Thread、文件、頁面或資料夾。
 * 說明哪些步驟可自動化
 * 保留人類核准點
 * 定義輸入、輸出、錯誤處理與回復
-* 指定由 Codex 或 Cowork 執行
+* 程式工作預設由 Claude／Claude Code 承接；使用者指定或既有環境適合時選 Codex／Cowork
 * 必要時使用 Claude Handoff
 * 先建立測試環境
 * 驗證後才正式啟用

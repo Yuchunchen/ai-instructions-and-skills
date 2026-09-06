@@ -5,9 +5,11 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 
 # Notion Knowledge Capture
 
-**版本：v1.1｜2026-07-19**
+**版本：v1.2｜2026-09-06**
 
-將值得長期保存的知識安全地沉澱到 Notion。Notion 是保存層與單一真相來源，不是與 ChatGPT 或 Claude 並列的接手者。
+將值得長期保存的知識安全地沉澱到 Notion。Notion 是長期知識與 Governance／Architecture／Registry Canonical 的保存層；AI Instructions／Skills 原文以 GitHub 為 Source Canonical，產品設定介面的 Runtime 狀態另行驗證。
+
+日常 Notion 維護預設由 ChatGPT Work 承接；Claude 完成其主責的長文件或程式工作時，也可更新授權範圍內的對應頁面。每次更新由當次主責 AI 完成，接手者先讀最新版，不以 AI 品牌決定內容是否為正式版本。
 
 ## 基本原則
 
@@ -17,8 +19,8 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 只保存已整理、可重複使用且會影響後續理解或工作的方法與變化。
 - 寫入前 read-first。
 - 預設只新增或附加，不覆寫既有內容。
-- 只修改明確允許的 `[ChatGPT]` 區塊或建立安全的子頁／獨立頁。
-- 不自行修改 Architecture、INDEX.md、CLAUDE.md、Registry、canonical 或資料庫結構。
+- 只修改已授權的頁面或區塊，保留既有結構、歷史與子頁；一般新增內容可使用 `[ChatGPT]` 區塊或安全的子頁／獨立頁。
+- 已授權的 Notion Architecture、Registry 或 canonical 更新可由當次主責 AI 執行，遵守目標頁的維護方式；不自行擴張修改範圍。INDEX.md、CLAUDE.md 的檔案操作及資料庫結構變更仍依適用專案指示與獨立授權。
 - 不刪除、搬移、封存頁面，也不建立不必要的資料庫、欄位或標籤。
 - 資訊矛盾或未定案時，標示狀態，不把它寫成正式結論。
 - 使用使用者主要語言；中文時使用繁體中文與台灣用語。
@@ -54,7 +56,7 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 明確區分「已在 UI 生效」「建議版本」「待確認」「已退役」。
 - 新版本建立新快照或在既有快照中追加 dated block；不要覆蓋舊版本。
 - Skills 只保存名稱、版本、用途、觸發條件、依賴與變更摘要；完整 SOP 留在 Skill 本體，不複製到 Architecture。
-- 若涉及 Architecture、Setup Log、instruction snapshot 或 canonical，同時產生 Claude handoff；ChatGPT 不直接改 canonical。
+- 若涉及 Architecture、Setup Log、instruction snapshot 或 canonical，形成 Configuration Delta，由當次已授權主責 AI 更新實際受影響頁面並回讀；只有確實需要 Claude 接手時才產生 Claude handoff。
 - 不因單次產品 UI 出現就推論所有帳號、平台或方案皆一致；保存觀察日期與裝置／平台。
 
 ## 處理流程
@@ -83,7 +85,7 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 使用者已指定頁面時，先搜尋並讀取該頁。
 - 使用者未指定時，依計畫、專案、主題、單位與文件名稱搜尋相關頁。
 - 最多提出三個可靠候選。
-- 候選明確且只有一個時，詢問要建立子頁或附加 `[ChatGPT]` 區塊。
+- 使用者已指定頁面與寫入方式時沿用；只有放置方式尚未確認且會影響既有內容或治理時，才詢問要建立子頁或附加區塊。
 - 多個同名或用途不同的頁面無法判斷時，一次只問一個最重要問題。
 - 找不到安全位置時，建立獨立私人頁面；不要猜測 canonical 位置。
 
@@ -94,8 +96,9 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 在使用者指定且已讀取的計畫頁下建立子頁
 - 建立獨立私人頁
 - 在非 canonical 頁面尾端附加明確的 `[ChatGPT]` Knowledge Delta 區塊
+- 已有明確授權與範圍的 Notion canonical 更新：先讀現況，依適用維護規則局部修改或追加 dated patch，完成後回讀；不因正式頁面的身分自動轉交 Claude
 
-必須先取得確認：
+下列工作若尚未獲得涵蓋該內容與範圍的授權，必須先取得確認；已確認的同一範圍不重複核准：
 
 - 直接修改計畫主頁的重要內容
 - 同時寫入多個頁面
@@ -107,15 +110,15 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 覆寫整頁
 - 修改資料庫結構
 - 刪除、搬移或封存頁面
-- 修改 Architecture、INDEX.md、CLAUDE.md、Registry 或 canonical
+- 未授權的 Architecture、Registry 或 canonical 修改，以及本 Skill 範圍外的 INDEX.md／CLAUDE.md 檔案操作
 
-遇到上述系統契約層工作時，產生 `[ChatGPT-Delta｜for Claude]` 建議，交由 Claude／Cowork 先做 implementation plan。
+超出授權範圍時先準備變更內容、影響與必要核准，不因涉及 Notion 就一律交給 Claude。若使用者指定 Claude 接手，再產生 `[ChatGPT-Delta｜for Claude]`。
 
 ### 5. 驗證與回報
 
 寫入完成後：
 
-1. 重新確認頁面或工具回傳結果。
+1. 重新讀取已寫入的頁面或區塊，確認內容與預期相符；無法回讀時明示「寫入回傳成功，內容尚未回讀驗證」。
 2. 回報頁面名稱、位置、寫入方式與狀態。
 3. 提供可點擊的 Notion 連結。
 4. 說明是否建立新頁、建立子頁或附加內容。
@@ -191,4 +194,4 @@ description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為�
 - 不把 Notion Link 當成交班全文；下一個 AI 無法存取 Notion 時，仍需提供可貼入的文字。
 - 不因找到名稱相似的頁面就假設它是正確目的地。
 - 不建立重複頁面；寫入前先搜尋。
-- 每次原則上只建立或更新一個頁面。
+- 只更新本次已授權且實際受影響的頁面；依需要可包含一頁或多頁，逐頁回讀並回報結果。

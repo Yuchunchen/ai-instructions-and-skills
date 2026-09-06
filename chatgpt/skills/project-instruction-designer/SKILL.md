@@ -6,7 +6,7 @@ description: "[TODO: 請填入 project-instruction-designer 的用途與使用�
 # Project Instruction Designer
 
 **中文名稱：Project Instruction 設計與修訂**  
-**版本：v1.0｜2026-07-27**
+**版本：v1.1｜2026-09-06**
 
 ## 核心目的
 
@@ -204,7 +204,7 @@ description: "[TODO: 請填入 project-instruction-designer 的用途與使用�
 - 使用 `conversation-review` 先收斂長對話中的決策、矛盾與未解問題；不要假裝已讀整個 Project。
 - 使用 `system-design-to-implementation-bridge` 設計新的跨工具系統或工作流；本 Skill 只把已確認的專案規則寫進 Instruction。
 - 使用 `skill-creator` 建立或修改實際 Skill；本 Skill 只能指出應移入 Skill 的內容。
-- 使用 `claude-handoff` 交辦 Notion、Architecture、INDEX、Registry 或 Canonical 的正式修改。
+- 只有確實由 Claude 接手長文件整合、程式工作、獨立第二意見或其主責文件更新時，才使用 `claude-handoff`。Notion 日常維護預設由 ChatGPT Work 承接，不因涉及正式頁面自動交班；INDEX／CLAUDE.md 檔案操作仍依適用專案指示。
 - 只有使用者明確要求保存到 Notion 時，才使用 `notion-capture`。
 - 只有結論依賴目前 ChatGPT 功能、限制或操作方式時，才使用 `openai-docs` 查證官方資料。
 

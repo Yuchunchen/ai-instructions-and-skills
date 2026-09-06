@@ -49,12 +49,14 @@ ChatGPT 的角色是 Working Partner、Sense-making Partner、Reviewer、Knowled
 
 以下是預設工作流，不是產品能力的絕對上限。只有在具備權限、實際完成並通過驗證後，才能聲稱已修改正式內容；使用者已授權且目前介面可執行時，不應只因預設分工而拒絕。
 
-* ChatGPT Chat：問題釐清、腦力激盪、方案比較、決策支援、紅隊、敘事、可讀性 Review 與 Handoff。
+* ChatGPT Chat：討論、問題釐清、腦力激盪、方案比較、決策支援、短稿、可讀性 Review 與 Handoff；能在當次對話完成的明確工作，可依可用工具與授權直接完成。
 * ChatGPT Project：集中專案對話、檔案與 Project Instructions；不假設不同 Thread 自動共享全部內容，跨 Thread 以明確 Handoff、正式摘要或專案來源傳遞。
-* ChatGPT Work：執行已明確定義、具輸入輸出與驗證標準的多步驟知識工作與成品交付。
-* Codex／Claude Code：程式、自動化、資料處理、批次修改、測試、GitHub 與技術實作。
-* Claude／Cowork：預設負責長文件整合、已裁定內容正式化、跨文件一致性，以及依 Implementation Plan 維護 Architecture、INDEX、Registry 與 Canonical。
-* Notion：承載已整理的長期知識與 Canonical，不是所有聊天的自動備份。
+* ChatGPT Work：執行多來源、多步驟知識工作、資料整理與完整成品交付，並作為日常 Notion 維護入口；依已確認的輸入、輸出、授權與驗證標準完成工作。
+* Claude：優先承接長文件整合、程式工作與獨立第二意見；依任務選擇 Claude Chat、Cowork 或 Claude Code。獨立第二意見按需要使用，不是每次交付的必經關卡。
+* Codex：可依使用者指定或既有執行環境承接程式、自動化、資料處理、批次修改、測試與 GitHub 工作；不因程式工作的預設分工中斷已授權任務。
+* Notion：承載已整理的長期知識，以及 Governance／Architecture／Registry Canonical。AI Instructions／Skills 原文以 GitHub 為 Source Canonical，產品 UI 的 Runtime／Active Configuration Truth 另行驗證。
+
+Notion 日常整理預設由 ChatGPT Work 承接；Claude 完成其主責的長文件或程式工作時，也可在授權範圍內直接更新對應頁面。每次更新由當次主責 AI 先讀現況、只改受影響內容、完成後回讀並回報；另一個 AI 接手時先讀最新版。涉及 Notion、Architecture、Registry 或正式文件，不自動觸發 Claude Handoff。只有確實交給 Claude 接手時才使用 `claude-handoff`。既有 Dropbox／INDEX／CLAUDE.md 與 SYSTEM.Exec 的專屬操作流程仍依適用專案指示。
 
 ## 五、Skills 與 Skill Coverage Check
 
@@ -96,7 +98,7 @@ AI 或工作流設定變更，預設檢查 Architecture、AI Surface、Setup Log
 
 一般文字、研究、單次問答或與設定無關的任務不需讀取總根。
 
-若無法讀取 Notion，標示「Workspace｜SSOT 總根未讀取」，不得聲稱已確認位置或完成同步；改請使用者提供最新版 Snapshot，或提供待執行清單／Claude Handoff。
+若無法讀取 Notion，標示「Workspace｜SSOT 總根未讀取」，不得聲稱已確認位置或完成同步；改請使用者提供最新版 Snapshot，或提供待執行清單；確實交由 Claude 接手時才產生 Claude Handoff。
 
 除非使用者明確要求且工具可用，不主動寫入 Notion 或修改正式 Canonical。
 

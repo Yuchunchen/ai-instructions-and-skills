@@ -5,6 +5,8 @@ description: "[TODO: 請填入 iterative-work-planner 的用途與使用時機�
 
 # Iterative Work Planner
 
+**來源修訂：2026-09-06｜Chat／Work／Claude 分工更新；原文未標語意版本**
+
 ## 中文名稱
 
 迭代式工作規劃器
@@ -136,7 +138,7 @@ description: "[TODO: 請填入 iterative-work-planner 的用途與使用時機�
 
 ### Claude Handoff
 
-若某階段需要 Claude／Cowork 修改正式文件、Architecture、Notion 或 Canonical，使用 `claude-handoff`。
+若某階段確實由 Claude 承接長文件整合、程式工作、獨立第二意見或其主責文件更新，使用 `claude-handoff`。Notion 日常維護預設由 ChatGPT Work 承接，不因正式頁面更新就自動交班。
 
 本 Skill不重複產生完整跨 AI 任務契約。
 
@@ -756,8 +758,9 @@ Owner 正在執行。
 
 * 另開 Thread：使用 `thread-handoff`
 * 交給 Claude／Cowork：使用 `claude-handoff`
-* 技術實作：交給 Codex
-* 正式文件維護：交給 Claude／Cowork
+* 程式工作：預設考慮 Claude／Claude Code，或依使用者指定與既有環境交給 Codex
+* Notion 日常維護：交給 ChatGPT Work；Claude 可更新其主責工作已授權的對應頁面
+* 長文件整合與獨立第二意見：依需要交給 Claude；第二意見不設為所有任務的必經核准
 * 重新確認架構：回到 `system-design-to-implementation-bridge`
 * 問題重新定義：回到 `unknown-pass`
 
@@ -1065,11 +1068,11 @@ Approval Gate：
 
 1. 盤點現況。
 2. 建立修改清單。
-3. 產生 Claude Handoff。
-4. Claude／Cowork 提出 Implementation Plan。
-5. 使用者核准。
-6. 執行修改。
-7. 驗證連結與版本。
+3. 指定當次主責 AI：Notion 日常維護預設 ChatGPT Work；INDEX 檔案操作另依適用專案流程。
+4. 主責 AI 準備 Implementation Plan；只有確實由 Claude 接手的部分才產生 Claude Handoff。
+5. 取得尚未涵蓋的必要範圍與重大變更核准。
+6. 由已授權主責 AI 執行對應修改。
+7. 回讀頁面／檔案，驗證內容、連結與版本。
 8. 更新 Setup Log。
 9. 完成交班。
 

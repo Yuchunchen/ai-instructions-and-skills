@@ -5,7 +5,7 @@ description: "[TODO: 請填入 thread-handoff 的用途與使用時機；此為�
 
 # ChatGPT Thread Handoff
 
-**版本：v1.1｜2026-07-19**
+**版本：v1.2｜2026-09-06**
 
 產生可直接貼到新 ChatGPT 討論串的自足交班稿。
 
@@ -97,6 +97,6 @@ description: "[TODO: 請填入 thread-handoff 的用途與使用時機；此為�
 
 ## 邊界
 
-- 不加入 Claude 專屬的 implementation plan 或 canonical 修改指令。
-- 不直接讀寫 Notion；使用者另要求保存時，可同時使用 `notion-capture`。
+- 依新的 ChatGPT Chat／Work 任務說明預期交付、既有授權與驗證條件；不把接手者改成 Claude，也不因涉及 canonical 自動產生 Claude Handoff。
+- 為來源查核可讀取使用者指定且可存取的 Notion 內容；本 Skill 只產生交班稿。使用者另要求保存時可使用 `notion-capture`，由已授權主責 AI 寫入並回讀。
 - 若只是整理目前討論而不換 thread，使用 `conversation-review`。

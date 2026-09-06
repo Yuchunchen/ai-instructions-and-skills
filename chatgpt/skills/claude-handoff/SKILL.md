@@ -5,9 +5,15 @@ description: "[TODO: 請填入 claude-handoff 的用途與使用時機；此為�
 
 # Claude Handoff
 
-**版本：v1.1｜2026-07-19**
+**版本：v1.2｜2026-09-06**
 
-產生供 Claude 或 Claude Cowork 接手的安全任務契約。重點不只是摘要，而是明確界定應做、不應做、核准點、可修改範圍與驗證要求。
+產生供 Claude、Claude Cowork 或 Claude Code 接手的安全任務契約。重點不只是摘要，而是明確界定應做、不應做、核准點、可修改範圍與驗證要求。
+
+## 使用時機
+
+- 使用者明確要求交給 Claude，或已確認由 Claude 承接長文件整合、程式工作或獨立第二意見，而且需要傳遞任務脈絡。
+- 不因涉及 Notion、Architecture、Registry 或正式文件就自動使用本 Skill。日常 Notion 維護預設由 ChatGPT Work 承接；Claude 也可在授權範圍內更新其主責工作的對應頁面。
+- 獨立第二意見只交付審查結果，除非另有修改授權；不將它設為所有工作的必經核准。
 
 ## 基本原則
 
@@ -140,5 +146,5 @@ Implementation plan 至少包含：
 
 - 本 Skill 只產生交班契約，不直接修改 Architecture、INDEX.md、CLAUDE.md、Registry 或 canonical。
 - 使用者另要求把已確認 Knowledge Delta 寫入 Notion 時，可同時使用 `notion-capture`。
-- Global Instructions、About Me、Project Instructions 或 Skills 變更若影響現行工作流，應要求 Claude 同步檢查 Architecture、AI surface、Setup Log 與 instruction snapshot；不得只更新其中一處。
+- Claude 接手的 Global Instructions、About Me、Project Instructions 或 Skills 變更若影響現行工作流，依變更範圍檢查相關 Architecture、AI surface、Setup Log 與 instruction snapshot，只更新實際受影響的頁面。Claude 可直接更新其已授權主責工作的對應 Notion 頁面，完成後回讀並回報；其他 AI 接手時先讀最新版。
 - 若只是換到新 ChatGPT 討論串，使用 `thread-handoff`。

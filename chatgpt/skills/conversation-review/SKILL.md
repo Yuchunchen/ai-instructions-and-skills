@@ -1,5 +1,78 @@
-# Source pending import
+# Conversation Review
 
-The current installed Skill source will be manually copied here.
+**版本：v1.1｜2026-07-19**
 
-Do not treat this placeholder as the active Skill definition.
+將目前可見的討論整理成可靠的階段性檢視，不要把它誤寫成跨 AI 交班稿。
+
+## 基本原則
+
+- 只使用目前可見對話、使用者提供的資料，以及工具實際讀取到的內容。
+- 不宣稱已讀取其他討論串、未提供附件、未連接系統或其他 AI 的記憶。
+- 清楚區分已確認事實、已形成決策、暫定方向、建議、已完成、進行中、尚未開始與尚待確認。
+- 不把討論過的方案當成定案。
+- 不把計畫執行的工作當成已完成。
+- 若資訊矛盾，保留差異並標示「待釐清」，不要自行選邊。
+- 保留會影響後續決策的理由、限制、日期、數字、責任分工、版本、風險與未解問題。
+- 刪除寒暄、重複內容與無關支線。
+- 使用使用者主要語言；中文時使用繁體中文與台灣用語。
+- 預設使用手機友善 Markdown，不使用表格。
+
+## 處理流程
+
+1. 辨識本次要收斂的主題與範圍。
+2. 找出目前討論的主線與支線。
+3. 合併重複資訊，但保留重要差異。
+4. 抽取已確認事實、已形成決策與決策理由。
+5. 標示暫定方案、被否決方案與後來修正的舊結論。
+6. 檢查概念漂移、前後矛盾、版本混用與狀態誤判。
+7. 整理目前完成度、未解問題與下一個最有價值的焦點。
+8. 若討論涉及 About Me、Global Custom Instructions、Project Instructions、Skills、Apps 或 AI surface 分工變更，另外抽取 Configuration / Workflow Delta。
+9. 只有真的會影響長期工作時，才列出 Knowledge Delta 候選；不要直接寫入 Notion。
+
+## 固定輸出
+
+[Conversation-Review]
+
+### 1. 收斂目的
+說明這次要整理什麼，以及不包含什麼。
+
+### 2. 目前主線
+用最少但充分的背景說明目前正在處理的核心問題。
+
+### 3. 已確認事實
+只列有目前對話或來源支持的內容。
+
+### 4. 已形成決策
+列出定案內容與理由。沒有正式定案時直接說明。
+
+### 5. 目前狀態
+分為已完成、進行中與尚未開始。
+
+### 6. 暫定方向
+列出仍在評估、尚未核准或需驗證的選項。
+
+### 7. 已否決或已修正內容
+列出不應在後續被重新當成現行方案的舊內容。
+
+### 8. 矛盾與 drift
+指出前後差異、版本衝突、概念漂移或狀態誤判。
+
+### 9. 尚待確認
+只列會改變方向、架構或決策的重要未知。
+
+### 10. 建議下一步
+提出一至三個最有價值的後續動作。
+
+### 11. Configuration / Workflow Delta
+若本次涉及 AI 設定或工作流，列出：變更物件、舊做法、新做法、是否已在 UI 生效、受影響頁面／Skills、以及尚需 Claude 處理的 canonical 更新。若無，寫「本次無設定或工作流變更」。
+
+### 12. Knowledge Delta 候選
+只列可能值得長期保存的新增決策、修正、方法或風險；若沒有，寫「目前無需沉澱」。
+
+## 邊界
+
+- 使用者明確要求開新 ChatGPT 討論串時，改用 `thread-handoff`。
+- 使用者明確要求交給 Claude 或 Cowork 時，改用 `claude-handoff`。
+- 使用者要求保存到 Notion 時，可同時使用 `notion-capture`。
+- 使用者只說「幫我交班」但未指定接手者時，改用 `work-handoff`。
+- 若收斂結果會影響 Architecture、Setup Log、instruction snapshot 或 canonical，完成 review 後改用 `claude-handoff` 產生變更契約。

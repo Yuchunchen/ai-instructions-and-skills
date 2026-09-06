@@ -1,6 +1,6 @@
 ---
 name: multi-perspective-reviewer
-description: "[TODO: 請填入 multi-perspective-reviewer 的用途與使用時機；此為待填 placeholder。]"
+description: "從不同角色與利害關係人的立場，檢查方案、政策、流程、系統、Implementation Plan、計畫書或正式文件的可用性、可執行性、治理、成本、安全、維護與審查風險。常用視角包括使用者、第一線執行者、管理者、財務、資安、資料治理、維護者與外部審查者。當使用者要求「從不同角色檢查」、「多角度 Review」、「模擬各方反應」、「看看誰會反對」、「方案上線前檢查」時使用。不要用來重新執行完整 Unknown Pass、設計實作架構、拆解工作計畫、進行完整證據紅隊，或取代具有正式權限的人員核准。"
 ---
 
 # Multi-perspective Reviewer

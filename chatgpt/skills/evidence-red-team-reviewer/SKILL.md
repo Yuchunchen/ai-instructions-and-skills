@@ -1,6 +1,6 @@
 ---
 name: evidence-red-team-reviewer
-description: "[TODO: 請填入 evidence-red-team-reviewer 的用途與使用時機；此為待填 placeholder。]"
+description: "檢查計畫書、研究、政策、方案、系統或正式文件中的主張是否有足夠證據，是否存在過度推論、因果跳躍、數據誤用、將預期成果寫成既有事實，以及哪些風險可能使方案失敗。當使用者要求「證據檢查」、「紅隊審查」、「模擬審查委員攻擊」、「找出過度推論」、「檢查成果是否可驗證」、「提高計畫通過率」時使用。輸出主張—證據對照、推論強度、成果可驗證性、失敗情境、優先修正及整體判斷。不要用來取代完整 Unknown Pass、多視角審查、系統實作橋接、工作拆解、正式統計分析或法規與專業核准。"
 ---
 
 # Evidence & Red Team Reviewer

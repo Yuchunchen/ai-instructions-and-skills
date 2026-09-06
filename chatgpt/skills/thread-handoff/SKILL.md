@@ -1,6 +1,6 @@
 ---
 name: thread-handoff
-description: "[TODO: 請填入 thread-handoff 的用途與使用時機；此為待填 placeholder。]"
+description: "把目前可見對話整理成新的 ChatGPT 討論串可立即接續工作的自足交班稿。當使用者說「交班給新討論串」「開新 thread 繼續」「整理給另一個 ChatGPT」「產生 ChatGPT handoff」「這串太長，收斂後換一串」或要求避免 context drift 時使用。不要用於 Claude 執行交接或直接寫入 Notion。"
 ---
 
 # ChatGPT Thread Handoff

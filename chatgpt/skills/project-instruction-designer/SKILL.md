@@ -1,6 +1,6 @@
 ---
 name: project-instruction-designer
-description: "[TODO: 請填入 project-instruction-designer 的用途與使用時機；此為待填 placeholder。]"
+description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT Project Instructions。當使用者要求建立新的 Project Instruction、檢查或修正現有版本、合併新規則、刪除重複或過時內容、控制字數、比較新舊版本、判斷內容應放在 Project Instruction／Global Custom Instructions／Skill／Prompt／Project 來源／Canonical，或詢問某個 Project 是否需要更新 Instruction 時使用。先執行 Skill Coverage Check，再保留專案目的、背景、優先順序、永久規則、授權邊界、Skill 路由、跨 Skill 順序與專案例外；預設交付可直接貼上的完整版本及必要的 Configuration Delta。不要用來建立 Global Custom Instructions、撰寫 Skill SOP、一般文稿，或未經授權直接修改 Notion 與正式設定。"
 ---
 
 # Project Instruction Designer

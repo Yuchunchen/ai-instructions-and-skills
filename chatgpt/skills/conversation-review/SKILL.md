@@ -1,6 +1,6 @@
 ---
 name: conversation-review
-description: "[TODO: 請填入 conversation-review 的用途與使用時機；此為待填 placeholder。]"
+description: "收斂與檢視目前可見的對話或工作討論，整理主線、進度、決策、矛盾、未解問題與 context drift。當使用者說「整理目前討論」「收斂一下」「盤點進度」「目前決定了什麼」「找矛盾／漂移」「不要交班，只先整理」時使用。不要在未被要求時產生 ChatGPT、Claude 或 Notion 交班稿。"
 ---
 
 # Conversation Review

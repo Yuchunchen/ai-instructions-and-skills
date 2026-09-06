@@ -1,6 +1,6 @@
 ---
 name: write-like-yu-chun
-description: "[TODO: 請填入 write-like-yu-chun 的用途與使用時機；此為待填 placeholder。]"
+description: "Write and revise Traditional Chinese communications in Yu-Chun Chen's confirmed style. Use for hospital or organizational announcements, internal news and achievement updates, 3P progress updates, executive updates, policy explanations, appreciation or encouragement messages, coordination emails, external explanations, and for turning voice-dictated or stream-of-consciousness notes into concise, ready-to-send prose."
 ---
 
 # Write Like Yu-Chun

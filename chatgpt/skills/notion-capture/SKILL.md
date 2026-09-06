@@ -1,6 +1,6 @@
 ---
 name: notion-capture
-description: "[TODO: 請填入 notion-capture 的用途與使用時機；此為待填 placeholder。]"
+description: "從目前討論、交班稿或工作成果中篩選值得長期保存的 Knowledge Delta，並在使用者要求時安全地搜尋、讀取及寫入 Notion。當使用者說「存到 Notion」「寫入計畫頁」「保存 Knowledge Delta」「建立 Notion 交班／知識頁」「整理後提供 Notion 連結」時使用。可與 thread-handoff 或 claude-handoff 同時使用，但不要把完整聊天自動當成正式知識。"
 ---
 
 # Notion Knowledge Capture

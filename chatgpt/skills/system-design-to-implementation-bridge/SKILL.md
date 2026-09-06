@@ -1,6 +1,6 @@
 ---
 name: system-design-to-implementation-bridge
-description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途與使用時機；此為待填 placeholder。]"
+description: "將已大致收斂的概念、系統架構、AI 工作流或組織流程，轉換成可在使用者現有工具與 Architecture 中實際運作的實作方案。當使用者詢問「如何落地」、「下一步怎麼做」、「要放在哪個工具」、「如何使用 ChatGPT、Claude、Cowork、Codex、Notion 實作」，或系統設計討論已完成但尚未形成具體操作方式時使用。輸出 Design Readiness Check、重要未知、工具配置、Owner／Trigger／Input／Output、實作順序、Step-by-step Guide、驗證與回復方式。不要用來取代完整 Unknown Pass、專案任務拆解、多視角審查、證據紅隊、程式實作或跨 AI Handoff。"
 ---
 
 # System Design to Implementation Bridge

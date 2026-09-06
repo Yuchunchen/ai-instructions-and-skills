@@ -1,6 +1,6 @@
 ---
 name: iterative-work-planner
-description: "[TODO: 請填入 iterative-work-planner 的用途與使用時機；此為待填 placeholder。]"
+description: "將已確認的 Implementation Plan、系統落地方案或大型執行任務，拆解成可逐步完成的階段、任務、Owner、依賴、檢查點、核准點與完成標準。當使用者要求「拆成執行步驟」、「排出階段與任務」、「指定負責人與依賴」、「建立一週或多階段工作計畫」，或 System Design to Implementation Bridge 已完成並需要進一步拆解時使用。不要用來重新定義問題、選擇架構、決定工具、執行完整紅隊、修改正式系統或取代 Thread／Claude Handoff。"
 ---
 
 # Iterative Work Planner

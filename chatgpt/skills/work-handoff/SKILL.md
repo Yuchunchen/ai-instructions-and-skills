@@ -1,6 +1,6 @@
 ---
 name: work-handoff
-description: "[TODO: 請填入 work-handoff 的用途與使用時機；此為待填 placeholder。]"
+description: "將目前可見工作整理成中立、可重用的標準交班核心，適用於使用者只說「幫我交班」、尚未決定交給 ChatGPT 或 Claude、需要同時交給多個目的地，或要求先建立標準 handoff core。若接手者已明確是新 ChatGPT、Claude 或 Notion，優先搭配對應的 thread-handoff、claude-handoff 或 notion-capture。"
 ---
 
 # Work Handoff Core

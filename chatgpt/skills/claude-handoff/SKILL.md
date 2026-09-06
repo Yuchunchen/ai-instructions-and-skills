@@ -1,6 +1,6 @@
 ---
 name: claude-handoff
-description: "[TODO: 請填入 claude-handoff 的用途與使用時機；此為待填 placeholder。]"
+description: "將目前可見工作整理成 Claude、Claude Project 或 Claude Cowork 可安全接手的任務契約與 Knowledge Delta；也適用於 About Me、Global Custom Instructions、Project Instructions、Skills、Apps 或 AI surface 變更，需要同步 Architecture、Setup Log 或 Notion 快照時。當使用者說「交班給 Claude」「貼給 Claude」「Claude／Cowork 接手」「請 Claude 更新長期系統」「產生 Claude handoff」，或需要交辦程式、自動化、Notion、INDEX.md、CLAUDE.md、Architecture、Registry 與 canonical 相關工作時使用。不要直接修改這些系統契約層。"
 ---
 
 # Claude Handoff

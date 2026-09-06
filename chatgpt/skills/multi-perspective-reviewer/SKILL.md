@@ -1,3 +1,8 @@
+---
+name: multi-perspective-reviewer
+description: "[TODO: 請填入 multi-perspective-reviewer 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Multi-perspective Reviewer
 
 ## 中文名稱

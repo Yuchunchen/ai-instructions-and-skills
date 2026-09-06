@@ -1,3 +1,8 @@
+---
+name: unknown-pass
+description: "[TODO: 請填入 unknown-pass 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Unknown Pass｜先探索未知，不急著解題
 
 ## 目的

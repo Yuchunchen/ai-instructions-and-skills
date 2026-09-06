@@ -1,3 +1,8 @@
+---
+name: evidence-red-team-reviewer
+description: "[TODO: 請填入 evidence-red-team-reviewer 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Evidence & Red Team Reviewer
 
 ## 中文名稱

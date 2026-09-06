@@ -1,3 +1,8 @@
+---
+name: work-handoff
+description: "[TODO: 請填入 work-handoff 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Work Handoff Core
 
 **版本：v1.1｜2026-07-19**

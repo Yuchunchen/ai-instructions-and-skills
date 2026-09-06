@@ -1,3 +1,8 @@
+---
+name: claude-handoff
+description: "[TODO: 請填入 claude-handoff 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Claude Handoff
 
 **版本：v1.1｜2026-07-19**

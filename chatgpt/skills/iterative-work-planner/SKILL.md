@@ -1,3 +1,8 @@
+---
+name: iterative-work-planner
+description: "[TODO: 請填入 iterative-work-planner 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Iterative Work Planner
 
 ## 中文名稱

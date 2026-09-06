@@ -1,3 +1,8 @@
+---
+name: system-design-to-implementation-bridge
+description: "[TODO: 請填入 system-design-to-implementation-bridge 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # System Design to Implementation Bridge
 
 ## 中文名稱

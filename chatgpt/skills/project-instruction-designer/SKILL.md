@@ -1,3 +1,8 @@
+---
+name: project-instruction-designer
+description: "[TODO: 請填入 project-instruction-designer 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Project Instruction Designer
 
 **中文名稱：Project Instruction 設計與修訂**  

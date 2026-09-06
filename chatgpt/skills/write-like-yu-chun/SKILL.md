@@ -1,3 +1,8 @@
+---
+name: write-like-yu-chun
+description: "[TODO: 請填入 write-like-yu-chun 的用途與使用時機；此為待填 placeholder。]"
+---
+
 # Write Like Yu-Chun
 
 **版本：v1.1｜2026-08-01**

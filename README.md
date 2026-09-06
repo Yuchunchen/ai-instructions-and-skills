@@ -4,7 +4,7 @@
 
 This private repository stores the source versions of personally maintained AI instructions and reusable Skills.
 
-Phase 1 establishes the source skeleton only. Instruction and Skill files are placeholders awaiting manual import of the current active source. They are not active configurations or installed Skill definitions.
+The 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Codex Custom Instructions file remains a placeholder pending its own source import. Source changes do not install or activate configurations.
 
 ## Truth layers
 
@@ -56,8 +56,10 @@ Before changing an existing instruction or Skill:
 7. Do not claim performance, speed, or model improvements without testing.
 8. Do not assume GitHub source equals currently installed runtime state.
 
-## Manual import
+## Source and package maintenance
 
-Copy the current active ChatGPT About Me and Custom Instructions from the ChatGPT UI, each installed Personal Skill's original SKILL.md, and the current Codex Custom Instructions (if any) into their matching files.
+Maintain each Skill as its complete folder: `SKILL.md` plus any linked `references/`, scripts, or assets. When the product supports Skill packages, import or replace the complete folder/package so supporting references remain available; copying only the entrypoint is insufficient for Skills that link supporting files.
 
-Do not reconstruct these sources from Notion, Memory, a Skills Registry, or inferred settings. Add supporting Skill package files only when they actually exist in the source package.
+The 2026-09-06 revision targets shared use by Astra and Sol. Five larger Skills route to optional references; short tasks keep essential instructions in the entrypoint. Validation results and installed state are recorded separately in Notion. A source revision or local test does not prove that the ChatGPT desktop installation has been updated or tested.
+
+For future source imports, read the actual configuration or original package. Do not reconstruct source from Notion, Memory, a Registry, or inferred settings. Import the Codex Custom Instructions only when its current source is available.

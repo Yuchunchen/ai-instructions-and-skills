@@ -1,11 +1,11 @@
 ---
 name: claude-handoff
-description: "將目前可見工作整理成 Claude、Claude Project 或 Claude Cowork 可安全接手的任務契約與 Knowledge Delta；也適用於 About Me、Global Custom Instructions、Project Instructions、Skills、Apps 或 AI surface 變更，需要同步 Architecture、Setup Log 或 Notion 快照時。當使用者說「交班給 Claude」「貼給 Claude」「Claude／Cowork 接手」「請 Claude 更新長期系統」「產生 Claude handoff」，或需要交辦程式、自動化、Notion、INDEX.md、CLAUDE.md、Architecture、Registry 與 canonical 相關工作時使用。不要直接修改這些系統契約層。"
+description: "在已確認由 Claude Chat、Project、Cowork 或 Code 接手時，整理任務背景、既有授權、成果與驗證要求。涉及 Notion、程式或設定變更本身不構成觸發條件。"
 ---
 
 # Claude Handoff
 
-**版本：v1.2｜2026-09-06**
+**版本：v1.3｜2026-09-06**
 
 產生供 Claude、Claude Cowork 或 Claude Code 接手的安全任務契約。重點不只是摘要，而是明確界定應做、不應做、核准點、可修改範圍與驗證要求。
 
@@ -42,36 +42,21 @@ description: "將目前可見工作整理成 Claude、Claude Project 或 Claude 
 10. 整理應帶回長期系統的 Knowledge Delta。
 11. 加入 Claude 起始指令。
 
-## Implementation Plan 啟動條件
+## Implementation Plan 與既有授權
 
-涉及下列任一事項時，要求 Claude 先提出 implementation plan，未經確認不要直接執行：
+交班必須帶入使用者已授權的工作、可修改範圍、尚未涵蓋的動作與真正的核准點。只因涉及程式、批次唯讀檢查、Notion 或正式文件，不要求重新提出計畫等待批准。
 
-- 程式或自動化
-- 批次檢查或批次改寫
-- 檔案搬移、刪除、重新命名
-- Notion 或 Dropbox 的系統性調整
-- INDEX.md、CLAUDE.md、Architecture、Registry 或 canonical
-- 系統規格、資料模型、工作流、權限或正式文件的變更
+- 單一明確修正或唯讀查核：接手者讀取必要現況後，直接完成已授權工作與相關驗證。
+- 多步驟、跨系統或影響較大的變更：準備最小充分 plan，列目標、影響範圍、執行順序、驗證與適用的回復方式；已有 plan 與授權可沿用。
+- 只有新增範圍、未授權的外部動作、不可逆風險或正式權責規定才要求新核准。需要新核准時，先把可完成的準備與具體變更整理好，再停在真正的批准邊界。
+- 修改目標前讀取現況；適用的 Dropbox／INDEX.md／CLAUDE.md／SYSTEM.Exec 專案規則仍保留，不以一般交班契約覆蓋專屬檔案操作要求。
+- 完成後回報實際變更、驗證結果、未解問題與必要回復資訊。偏離原範圍要說明，不以交班推定擴權。
 
-Implementation plan 至少包含：
+## 輸出方式
 
-1. 目標與成功條件
-2. 影響範圍
-3. 預計修改項目
-4. 執行順序
-5. 驗證方式
-6. 回復方式
-7. 需使用者確認的節點
+保留標記 [ChatGPT-Delta｜for Claude]。短任務用精簡版：任務與成果、必要背景／目前狀態、既有授權與限制、可取得來源、下一步與驗證、起始指令。下列是較完整情境的欄位選單，可合併或省略不相關章節，不必填「無」湊齊格式。重要授權、限制、來源可存取性與狀態差異不可因精簡而消失。
 
-要求 Claude：
-
-- read-first
-- 未經確認不直接修改 canonical
-- 修改前呈現預計變更或 diff
-- 若偏離原計畫，留下 implementation notes、working notes 或 deviations
-- 完成後提供變更清單、驗證結果與未解問題
-
-## 固定輸出
+## 完整情境參考格式
 
 [ChatGPT-Delta｜for Claude]
 
@@ -119,7 +104,7 @@ Implementation plan 至少包含：
 若無，寫「本次無設定或 surface 變更」。
 
 ### 9. Implementation Plan 要求
-列出本次是否需要 plan，以及必須包含的項目。若不需要，寫「本次不需要 implementation plan」。
+列出本次是否需要 plan，以及必須包含的項目。不需要時省略此節。
 
 ### 10. 尚待確認
 只列會改變方向、研究設計、系統架構或執行方式的重要未知。
@@ -138,9 +123,9 @@ Implementation plan 至少包含：
 列出新決策、新發現、新限制、被修正的假設、新任務、新風險、建議寫回位置、不應覆寫內容與尚需確認事項。
 
 ### 14. Claude 起始指令
-固定加入：
+依本次授權調整後加入：
 
-「請先依本交班稿重建目前狀態，不要重做已完成項目，也不要假設能存取未提供的來源。先檢查『尚待確認』是否有會改變架構的問題；若沒有，從『Claude 應做』第 1 項開始。涉及系統、程式、Notion 或檔案修改時，先提出 implementation plan，未經確認不得直接改動 canonical。」
+「請先依本交班稿重建目前狀態，不要重做已完成項目，也不要假設能存取未提供的來源。先檢查『尚待確認』是否有會改變架構的問題；若沒有，從『Claude 應做』第 1 項開始。沿用交班中已確認的授權與計畫，完成對應工作及驗證；只有新增範圍、未授權動作或正式權責規定才請求新核准。遇到實際阻塞時，說明已完成部分與解除條件，繼續可獨立完成的工作。」
 
 ## 邊界
 
@@ -148,3 +133,8 @@ Implementation plan 至少包含：
 - 使用者另要求把已確認 Knowledge Delta 寫入 Notion 時，可同時使用 `notion-capture`。
 - Claude 接手的 Global Instructions、About Me、Project Instructions 或 Skills 變更若影響現行工作流，依變更範圍檢查相關 Architecture、AI surface、Setup Log 與 instruction snapshot，只更新實際受影響的頁面。Claude 可直接更新其已授權主責工作的對應 Notion 頁面，完成後回讀並回報；其他 AI 接手時先讀最新版。
 - 若只是換到新 ChatGPT 討論串，使用 `thread-handoff`。
+
+## 完成與失敗處理
+
+交班稿能讓 Claude 在不讀舊對話的情況下開始指定工作，且成果、授權、來源與驗證條件清楚，即完成交班。產生契約不等於 Claude 已接收、已執行或已更新系統。
+來源不可存取時附必要摘要並標示重新取得方式；關鍵資料不足時指出受阻任務，其餘可接續事項保留。不用格式完整度掩蓋未知。

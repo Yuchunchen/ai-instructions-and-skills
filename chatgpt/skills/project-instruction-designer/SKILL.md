@@ -1,12 +1,12 @@
 ---
 name: project-instruction-designer
-description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT Project Instructions。當使用者要求建立新的 Project Instruction、檢查或修正現有版本、合併新規則、刪除重複或過時內容、控制字數、比較新舊版本、判斷內容應放在 Project Instruction／Global Custom Instructions／Skill／Prompt／Project 來源／Canonical，或詢問某個 Project 是否需要更新 Instruction 時使用。先執行 Skill Coverage Check，再保留專案目的、背景、優先順序、永久規則、授權邊界、Skill 路由、跨 Skill 順序與專案例外；預設交付可直接貼上的完整版本及必要的 Configuration Delta。不要用來建立 Global Custom Instructions、撰寫 Skill SOP、一般文稿，或未經授權直接修改 Notion 與正式設定。"
+description: "建立、檢查或修訂 ChatGPT Project Instructions，包含合併、壓縮、版本比較與內容放置判斷。只改指定片段時採局部修訂；不把 Global Instructions 或 Skill SOP 當成 Project 規則。"
 ---
 
 # Project Instruction Designer
 
 **中文名稱：Project Instruction 設計與修訂**  
-**版本：v1.1｜2026-09-06**
+**版本：v1.2｜2026-09-06**
 
 ## 核心目的
 
@@ -42,8 +42,8 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 - 只使用目前可見對話、使用者提供內容、已讀取檔案及工具實際取得資料。
 - 不宣稱已讀取整個 Project、其他 Thread、未提供附件、未讀取的 Notion 或其他 AI 記憶。
 - 將使用者最新編輯或明確確認的版本視為現行工作版本；不要恢復已被使用者改掉的舊文字。
-- 區分現行版、建議版、已套用版與歷史快照。
-- 未經使用者陳述或工具驗證，不得宣稱 Project Instruction 已在 UI 生效。
+- 分開記錄建議版、Source 已提交、使用者回報已套用、工具／UI 已驗證、Runtime 未確認與歷史快照。Source 提交不代表 UI 生效。
+- 使用者陳述可記為「使用者回報已套用」；只有工具讀回相符的 UI／設定內容才能記為「工具／UI 已驗證」，並保留日期與介面。
 - 遇到矛盾時保留差異並標示「待釐清」，不要自行裁定。
 - 若結論依賴目前產品限制、介面、權限或字數上限，查閱最新官方資料；不要把舊限制寫成永久規則。
 
@@ -66,7 +66,7 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 
 ### Step 1｜建立 Project 基線
 
-確認並標示：
+依模式建立足夠基線：Patch 只讀指定片段、必要上下文與適用規則；Create／全面 Revise 才檢查下列整體項目：
 
 - Project 要解決的問題
 - 主要工作與預期成果
@@ -90,7 +90,7 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 
 ### Step 2｜執行 Skill Coverage Check
 
-每次建立或修訂 Project Instruction 都要執行：
+Create、全面 Revise／Merge，或變更 Skill 路由、授權邊界、架構與跨 AI 分工時，執行與改動相關的 Coverage Check。純錯字、格式或不影響上述行為的 Patch 可略過；本次已取得且仍適用的清單與 Registry 內容可重用，不為同一變更重複抓取。
 
 1. 盤點目前介面可驗證的 Installed Skills。
 2. 若目前可存取使用者指定的 Skills Registry，實際讀取最新版；若無法讀取，明確標示「Skills Registry 未讀取」。
@@ -107,7 +107,7 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 
 ### Step 3｜診斷現行版本
 
-有現行版時，檢查：
+有現行版時依本次模式檢查相關項目；Patch 不因此升級成全面 Audit：
 
 - 是否重複 About Me 或 Global Custom Instructions
 - 是否複製已由 Skill 承載的 SOP
@@ -182,7 +182,7 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 
 ### Step 7｜完成前驗證
 
-確認：
+按改動範圍檢查；Patch 只驗證目標修改及受影響規則：
 
 - 內容確實屬於該 Project，而不是全域個人設定
 - Project 目的、成功條件、範圍與優先順序彼此一致
@@ -203,22 +203,22 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 - 使用 `unknown-pass` 處理仍會改變 Project 定義的重大未知。
 - 使用 `conversation-review` 先收斂長對話中的決策、矛盾與未解問題；不要假裝已讀整個 Project。
 - 使用 `system-design-to-implementation-bridge` 設計新的跨工具系統或工作流；本 Skill 只把已確認的專案規則寫進 Instruction。
-- 使用 `skill-creator` 建立或修改實際 Skill；本 Skill 只能指出應移入 Skill 的內容。
+- 實際 Skill 編修可使用目前介面可用的 `skill-creator`；若不可用，依該任務要求處理並說明限制。本 Skill 只判斷內容承載位置。
 - 只有確實由 Claude 接手長文件整合、程式工作、獨立第二意見或其主責文件更新時，才使用 `claude-handoff`。Notion 日常維護預設由 ChatGPT Work 承接，不因涉及正式頁面自動交班；INDEX／CLAUDE.md 檔案操作仍依適用專案指示。
 - 只有使用者明確要求保存到 Notion 時，才使用 `notion-capture`。
-- 只有結論依賴目前 ChatGPT 功能、限制或操作方式時，才使用 `openai-docs` 查證官方資料。
+- 只有結論依賴目前 ChatGPT 功能、限制或操作方式時，才用可用的 `openai-docs` 或官方文件查證；不假設所有介面均安裝該 Skill。
 
 ## Configuration Change 規則
 
 將 Project Instruction 的新增、修訂或移除視為 Configuration Change。
 
 - 草稿完成後，標示為「建議版」，不要宣稱已套用。
-- 使用者明確確認 UI 已更新後，才標示為「已套用」。
+- 依證據標示「Source 已提交」「使用者回報已套用」或「工具／UI 已驗證」；未檢查 Runtime 時明示未確認，不將三者混用。
 - 形成最小 Configuration Delta：變更內容、理由、影響範圍、是否需要同步其他正式來源。
 - 只建議更新實際受影響的 Snapshot、Setup Log、Architecture、Registry 或 Canonical，不固定全量同步。
-- 若需正式落地，先讀取使用者指定的導航入口與受影響頁面。
+- 若需正式落地，已知確切目標時直接讀取受影響頁面；位置不明才由指定導航入口尋找。不為局部更新遍讀所有治理頁。
 - 未經明確授權，不直接修改 Notion、Architecture、Registry、Project 設定或其他 Canonical。
-- 無法讀取正式來源時，提供待執行清單或 Handoff，不宣稱同步完成。
+- 無法讀取正式來源時，先完成可支持的草稿或局部修正，列受阻部分與補充方式，不宣稱同步完成；只有真正交班才製作 Handoff。
 
 ## 最終品質標準
 
@@ -229,3 +229,7 @@ description: "建立、診斷、修訂、整合、壓縮與版本比較 ChatGPT 
 3. 讓 AI 不必從大量重複 SOP 中尋找真正優先事項。
 4. 讓暫時工作、正式知識、Skill 與全域設定各自留在正確位置。
 5. 讓使用者能直接貼上、持續維護、追蹤差異並安全回復。
+
+## 完成條件
+
+依指定模式交付可用成果及必要變更說明，驗證受影響規則一致、已知字數限制與狀態標記，即完成文稿階段。若外層任務還包含已授權的正式設定或 Notion 更新，接續完成實際寫入與回讀；不可把建議版當作已安裝結果，也不因文稿完成重新要求同範圍授權。

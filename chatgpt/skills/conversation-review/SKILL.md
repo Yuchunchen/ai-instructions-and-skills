@@ -1,11 +1,11 @@
 ---
 name: conversation-review
-description: "收斂與檢視目前可見的對話或工作討論，整理主線、進度、決策、矛盾、未解問題與 context drift。當使用者說「整理目前討論」「收斂一下」「盤點進度」「目前決定了什麼」「找矛盾／漂移」「不要交班，只先整理」時使用。不要在未被要求時產生 ChatGPT、Claude 或 Notion 交班稿。"
+description: "整理目前可見討論的進度、決策、矛盾與未解問題。用於要求收斂或盤點而不換討論串；不自動產生交班或寫入 Notion。"
 ---
 
 # Conversation Review
 
-**版本：v1.2｜2026-09-06**
+**版本：v1.3｜2026-09-06**
 
 將目前可見的討論整理成可靠的階段性檢視，不要把它誤寫成跨 AI 交班稿。
 
@@ -34,7 +34,11 @@ description: "收斂與檢視目前可見的對話或工作討論，整理主線
 8. 若討論涉及 About Me、Global Custom Instructions、Project Instructions、Skills、Apps 或 AI surface 分工變更，另外抽取 Configuration / Workflow Delta。
 9. 只有真的會影響長期工作時，才列出 Knowledge Delta 候選；不要直接寫入 Notion。
 
-## 固定輸出
+## 輸出方式
+
+保留標記 [Conversation-Review]。短任務用精簡版：目前主線、重要決策／狀態、實際矛盾或未知，以及需要時的下一步。下列是較完整情境的欄位選單，可合併或省略不相關章節，不必填「無」湊齊格式。重要授權、限制、來源可存取性與狀態差異不可因精簡而消失。
+
+## 完整情境參考格式
 
 [Conversation-Review]
 
@@ -69,10 +73,10 @@ description: "收斂與檢視目前可見的對話或工作討論，整理主線
 提出一至三個最有價值的後續動作。
 
 ### 11. Configuration / Workflow Delta
-若本次涉及 AI 設定或工作流，列出：變更物件、舊做法、新做法、是否已在 UI 生效、受影響頁面／Skills、以及尚需由當次主責 AI 處理的 canonical 更新。若無，寫「本次無設定或工作流變更」。
+若本次涉及 AI 設定或工作流，列出：變更物件、舊做法、新做法、是否已在 UI 生效、受影響頁面／Skills、以及尚需由當次主責 AI 處理的 canonical 更新。無相關變更時省略此節。
 
 ### 12. Knowledge Delta 候選
-只列可能值得長期保存的新增決策、修正、方法或風險；若沒有，寫「目前無需沉澱」。
+只列可能值得長期保存的新增決策、修正、方法或風險；沒有候選時省略此節。
 
 ## 邊界
 
@@ -81,3 +85,8 @@ description: "收斂與檢視目前可見的對話或工作討論，整理主線
 - 使用者要求保存到 Notion 時，可同時使用 `notion-capture`。
 - 使用者只說「幫我交班」但未指定接手者時，改用 `work-handoff`。
 - 若收斂結果會影響 Architecture、Setup Log、instruction snapshot 或 canonical，記錄 Configuration Delta 與待處理事項。使用者要求保存時可使用 `notion-capture`；只有確實交給 Claude 接手時才使用 `claude-handoff`，不因檢視到 Notion 或正式文件變更就自動交班。
+
+## 完成與失敗處理
+
+重要決策、進度與未解事項已依可見資料分清，即完成本次收斂。沒有矛盾或 Knowledge Delta 時可省略，不製造問題。
+若只看得到部分對話，標明可見範圍；交付可確認的整理，不重建看不到的內容。若外層任務還要求已授權的後續工作，收斂後接續執行；只要求整理時停在整理結果。

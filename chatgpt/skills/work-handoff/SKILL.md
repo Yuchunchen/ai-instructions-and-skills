@@ -1,11 +1,11 @@
 ---
 name: work-handoff
-description: "將目前可見工作整理成中立、可重用的標準交班核心，適用於使用者只說「幫我交班」、尚未決定交給 ChatGPT 或 Claude、需要同時交給多個目的地，或要求先建立標準 handoff core。若接手者已明確是新 ChatGPT、Claude 或 Notion，優先搭配對應的 thread-handoff、claude-handoff 或 notion-capture。"
+description: "在使用者要求交班但接手者未定、需要多個目的地，或指定中立交班核心時整理工作。目的地已明確且只需一份交班時，直接使用對應 Skill。"
 ---
 
 # Work Handoff Core
 
-**版本：v1.1｜2026-07-19**
+**版本：v1.2｜2026-09-06**
 
 建立不綁定特定接手者的標準交班核心，供後續轉換為 ChatGPT、Claude 或 Knowledge Delta 版本。
 
@@ -36,7 +36,11 @@ description: "將目前可見工作整理成中立、可重用的標準交班核
    「這份交班要給新的 ChatGPT 討論串、Claude，還是先保留為中立交班核心？」
 11. 若使用者要求不要詢問，直接輸出中立核心。
 
-## 固定輸出
+## 輸出方式
+
+保留標記 [Work-Handoff-Core]。短任務用精簡版：交班目標、必要背景與狀態、決策／既有授權、來源、下一步與完成條件。下列是較完整情境的欄位選單，可合併或省略不相關章節，不必填「無」湊齊格式。重要授權、限制、來源可存取性與狀態差異不可因精簡而消失。
+
+## 完整情境參考格式
 
 [Work-Handoff-Core]
 
@@ -74,7 +78,7 @@ description: "將目前可見工作整理成中立、可重用的標準交班核
 說明應延續、不應重做、不應擴張與不得自行假設的內容。
 
 ### 12. Configuration / Workflow Delta
-若涉及 AI 設定或工作流變更，列出：變更物件、UI 狀態、舊新差異、受影響的 Architecture／AI surface／Setup Log／instruction snapshot／Skills，以及應由誰更新。若無，寫「本次無設定或工作流變更」。
+若涉及 AI 設定或工作流變更，列出：變更物件、UI 狀態、舊新差異、受影響的 Architecture／AI surface／Setup Log／instruction snapshot／Skills，以及應由誰更新。無相關變更時省略此節。
 
 ### 13. Knowledge Delta 候選
 列出可能值得長期沉澱的新決策、新方法、新限制、新修正與新風險。
@@ -91,4 +95,9 @@ description: "將目前可見工作整理成中立、可重用的標準交班核
 - 不直接寫入 Notion。
 - 不替 Claude 建立詳細 implementation plan。
 - 不把完整交班核心當成正式 Knowledge Delta。
-- 接手者明確時，優先使用目的地專屬 Skill。
+- 接手者已明確且只需一份交班時，直接使用目的地專屬 Skill，不再另做中立核心。多個目的地或明確要求核心時，才共享核心再轉換。
+
+## 完成與失敗處理
+
+接手者能獨立理解工作並知道可做範圍、來源、下一步與完成條件，即完成核心。來源缺漏時標示哪些任務受阻與如何補充，不推定其他 AI 自動存取。
+只產生交班稿不代表已建立新討論串、已傳送或已寫入外部系統。延續既有授權，不因換接手者重設所有核准點。

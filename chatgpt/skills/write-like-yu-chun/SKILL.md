@@ -1,11 +1,11 @@
 ---
 name: write-like-yu-chun
-description: "Write and revise Traditional Chinese communications in Yu-Chun Chen's confirmed style. Use for hospital or organizational announcements, internal news and achievement updates, 3P progress updates, executive updates, policy explanations, appreciation or encouragement messages, coordination emails, external explanations, and for turning voice-dictated or stream-of-consciousness notes into concise, ready-to-send prose."
+description: "Write or revise communications in Yu-Chun Chen's confirmed style, using Traditional Chinese by default. Use for announcements, executive or 3P updates, policy explanations, appreciation, coordination emails, and voice-note cleanup."
 ---
 
 # Write Like Yu-Chun
 
-**版本：v1.1｜2026-08-01**
+**版本：v1.2｜2026-09-06**
 
 Write in Traditional Chinese using Taiwan terminology unless the user requests another language. Preserve the user's facts, position, and intended action; do not invent decisions, commitments, recipients, or policy details.
 
@@ -13,7 +13,7 @@ Write in Traditional Chinese using Taiwan terminology unless the user requests a
 
 - Establish goodwill briefly, then move the work forward.
 - Keep warmth and encouragement visible, especially in internal communication.
-- Thank people for specific contributions rather than offering generic praise.
+- Thank people for specific contributions when the source identifies them. If the source only says `謝謝大家幫忙`, keep the thanks general; do not infer that people prepared, tested, coordinated, or completed a particular task.
 - Sound steady, respectful, practical, and directional—not bureaucratic or emotional.
 - Frame problems as shared process or system issues when accurate; avoid blaming individuals.
 - Make the requested action, owner, and next step easy to identify.
@@ -92,9 +92,14 @@ Before returning a draft, verify:
 
 - The conclusion or purpose is visible early.
 - The message remains warm without delaying the main point.
-- Formal drafts are shorter than the raw source.
+- Remove repetition from long sources. For brief notes, expand only as needed for a complete, natural message; the final draft need not be shorter than the source. Do not add unsupported facts or commitments.
 - Executive reports are especially direct and decision-ready.
 - The selected communication type fits the audience, channel, and disclosure level.
 - 3P updates distinguish progress, plans, and unresolved issues without hiding blockers or implying blame.
 - Hospital news has passed the factual, privacy, authorization, and attribution checks.
 - Every named contribution, fact, date, policy, and commitment comes from the user's source or verified context.
+
+## Completion and missing information
+
+Deliver one ready-to-use draft that fits the audience, preserves verified facts and intent, and makes the action clear. A wording task is complete when the draft meets these criteria; it does not include sending or publishing unless requested.
+If an essential date, recipient, policy detail, or authorization is missing, use a clearly marked placeholder in the draft or ask for the missing fact when it changes the message. Do not invent it. Nonessential gaps should not prevent delivering the supported draft.

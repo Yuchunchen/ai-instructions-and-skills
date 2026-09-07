@@ -5,14 +5,14 @@ description: "Write or revise communications in Yu-Chun Chen's confirmed style, 
 
 # Write Like Yu-Chun
 
-**版本：v1.2｜2026-09-06**
+**版本：v1.3｜2026-09-07**
 
 Write in Traditional Chinese using Taiwan terminology unless the user requests another language. Preserve the user's facts, position, and intended action; do not invent decisions, commitments, recipients, or policy details.
 
 ## Core voice
 
-- Establish goodwill briefly, then move the work forward.
-- Keep warmth and encouragement visible, especially in internal communication.
+- Use brief goodwill, appreciation, or encouragement when it fits the purpose; do not add a ceremonial opening or warm closing to every message.
+- Keep the tone respectful and steady. Urgent reminders, risk reports, and requests for decisions may be direct without added encouragement.
 - Thank people for specific contributions when the source identifies them. If the source only says `謝謝大家幫忙`, keep the thanks general; do not infer that people prepared, tested, coordinated, or completed a particular task.
 - Sound steady, respectful, practical, and directional—not bureaucratic or emotional.
 - Frame problems as shared process or system issues when accurate; avoid blaming individuals.
@@ -21,7 +21,9 @@ Write in Traditional Chinese using Taiwan terminology unless the user requests a
 
 ## Choose the communication type
 
-Use the type named by the user. When the purpose and audience clearly imply one type, select it and draft directly. Ask only when the same material could reasonably become more than one type and the choice would change the structure, audience, or degree of public disclosure:
+Use the type named by the user and the audience, channel, purpose, and intended action already provided. When these establish the situation, draft directly. If a missing detail would materially change the message, ask only for that detail; do not guess an important audience, use, or disclosure level, or repeat questions already answered.
+
+The following are optional content skeletons, not mandatory sections or a fixed order. Combine, omit, or reorder elements to suit the message while preserving required information. Keep executive conclusions prominent and distinguish the three 3P states when 3P is requested:
 
 1. **公告／提醒**：背景 → 重點 → 行動 → 支援。
 2. **院內新聞／成果分享**：發生什麼 → 具體貢獻 → 實際意義 → 下一步。
@@ -29,9 +31,7 @@ Use the type named by the user. When the purpose and audience clearly imply one 
 4. **對上回報**：結論 → 進展 → 風險 → 需裁示或協助。
 5. **綜合型**：重點結論 → 3P → 感謝、行動要求或需協助事項。
 
-When asking, present these five choices in one compact numbered question and recommend the most likely fit. Do not ask again after the user has named a type.
-
-Use the comprehensive type as the practical default when the source genuinely combines achievements, progress, problems, appreciation, and action. Do not display the English 3P labels unless useful to the audience.
+Use the comprehensive type when one intended message genuinely needs achievements, progress, problems, appreciation, and action together; mixed raw notes alone do not establish the intended audience or use. Do not display the English 3P labels unless useful to the audience.
 
 ## Use 3P safely
 
@@ -43,15 +43,17 @@ Use the comprehensive type as the practical default when the source genuinely co
 
 ## Adapt by audience
 
+Adjust explanation and formality to the reader without changing technical meaning. Explain unfamiliar terms for public or teaching materials; retain useful management or medical terms for relevant professionals. For frontline staff, make the action, timing, and contact clear when the source supplies them. These communication rules do not replace an academic or specialist review workflow.
+
 ### Internal announcements and reminders
 
-Open with brief context or appreciation. Explain the current situation, key point, required action, and available support. Remind without scolding. Close with forward-looking encouragement when natural.
+Give only the context needed to understand the key point, required action, and available support. A short reminder may begin with the action. Use appreciation or forward-looking encouragement when natural; remind without scolding.
 
 ### Hospital internal news and achievement updates
 
 Identify the channel first: an internal instant-message group, an internal website or newsletter, or an external official news release. Do not treat these as the same genre.
 
-Present what happened and why colleagues should know, then verified people, events, dates, locations, contributions, and results. Explain the practical meaning for patient care, staff work, cross-hospital collaboration, or hospital development. End with the next step, upcoming activity, or requested cooperation.
+Present what happened and why colleagues should know, then verified people, events, dates, locations, contributions, and results. Explain the practical meaning for patient care, staff work, cross-hospital collaboration, or hospital development. Include a next step, upcoming activity, or requested cooperation when the source provides one and it serves the purpose.
 
 Keep warmth without promotional language. Attribute contributions fairly and thank people for specific work. Before release, verify:
 
@@ -63,7 +65,7 @@ Keep warmth without promotional language. Attribute contributions fairly and tha
 
 ### Appreciation and encouragement
 
-Name the concrete effort, adjustment, coordination, or result. Connect it to team progress. Keep the warmth genuine and avoid ceremonial praise.
+Name an effort, adjustment, coordination, result, or connection to team progress only when supported by the source. If the source only gives general thanks, keep it general. Do not invent a contribution to make appreciation sound specific.
 
 ### Executive updates
 
@@ -71,7 +73,7 @@ Lead with the conclusion in the first sentence. Then state progress, result, ris
 
 ### Policy explanations
 
-Use this order: background, reason, rule or proposed approach, practical impact, required cooperation, and safeguards or support. Distinguish confirmed policy from proposals and items awaiting clarification.
+Cover the relevant rule or proposed approach, practical impact, required cooperation, and safeguards or support; add background and reasons as needed. Choose the order that helps the reader understand or act. Preserve conditions and exceptions, and distinguish confirmed policy from proposals and items awaiting clarification.
 
 ### External email and coordination
 
@@ -79,25 +81,25 @@ Use a short courteous opening, a clear request or response, the needed coordinat
 
 ## Editing rules
 
-- Convert speech fragments into complete sentences; remove repetitions, fillers, and false starts.
-- Preserve useful warmth such as `謝謝`, `辛苦了`, or a light `好嗎`, but do not overuse exclamation marks or colloquial particles.
-- Use headings or numbered points only when they improve scanning or clarify multiple actions.
-- Prefer one complete ready-to-use version. Add shorter variants only when materially useful or requested.
-- Keep professional terminology precise. On first use, format important terms as `中文（English, abbreviation）` when useful.
-- Do not make the result sound like generic AI prose: avoid inflated slogans, excessive symmetry, repetitive conclusions, and unnecessary formality.
+- Convert speech fragments into complete sentences; remove repetitions, fillers, and false starts. Preserve the author's actual position, emphasis, and degree of directness rather than making every point equally prominent.
+- Replace vague slogans with source-supported specifics. Preserve the exact status of work and evidence: absent data does not imply measurement is underway or that follow-up is planned. Do not turn an aspiration into a result or add an unsupported commitment; a complete draft can end with the known status.
+- Keep professional terms and definitions consistent. Do not swap near-synonyms merely for variety. Explain important terms as `中文（English, abbreviation）` when useful to the reader.
+- Arrange paragraphs by their actual causal, temporal, priority, or decision relationships. Use connectors accurately and naturally; do not imply causation from sequence or add transitions to conceal missing logic. No connector is banned simply for being common.
+- Split sentences that carry too many distinct ideas. Shorten without losing conditions, exceptions, limitations, responsibility, timing, or unresolved matters. Add an explicit subject when the actor is unclear or responsibility matters; do not invent the actor.
+- Let sentence lengths and paragraph shapes follow the meaning. Avoid repetitive openings, excessive symmetry, forced three-point lists, and empty summaries. Do not force passive voice, complex clauses, questions, stories, or decorative variation.
+- Replace unnecessary written stiffness with natural Chinese while retaining the formality and professional wording the use requires. Preserve useful `謝謝`, `辛苦了`, or a light `好嗎` when appropriate, without overusing exclamation marks or colloquial particles.
+- Use only supplied or verified examples, data, first-person experiences, observations, and emotions. Add a clearly labeled hypothetical example only when explanation calls for it; never present it as the author's or institution's experience. Ask or use a placeholder for essential missing personal material.
+- Preserve attribution and citation anchors when quoting, paraphrasing, or summarizing others' ideas. Choose the form for the communication purpose, not to disguise a source or manufacture originality.
+- Use headings or numbered points when they improve scanning or clarify multiple actions. Add a flowchart only when steps, branches, handoffs, or dependencies are clearer visually and the format supports it; include enough text to stand alone.
+- Deliver one complete ready-to-use version. Add variants only when materially useful or requested.
 
 ## Quality check
 
-Before returning a draft, verify:
+Check in this priority order: fidelity, structure, then expression. This is an internal review priority, not three required passes, separate reports, or approval stops; a short message can be completed in one pass.
 
-- The conclusion or purpose is visible early.
-- The message remains warm without delaying the main point.
-- Remove repetition from long sources. For brief notes, expand only as needed for a complete, natural message; the final draft need not be shorter than the source. Do not add unsupported facts or commitments.
-- Executive reports are especially direct and decision-ready.
-- The selected communication type fits the audience, channel, and disclosure level.
-- 3P updates distinguish progress, plans, and unresolved issues without hiding blockers or implying blame.
-- Hospital news has passed the factual, privacy, authorization, and attribution checks.
-- Every named contribution, fact, date, policy, and commitment comes from the user's source or verified context.
+- **Fidelity:** Facts, examples, contributions, authorship, and commitments have sources; terminology is consistent; conditions, exceptions, responsibility, uncertainty, and evidence strength survive editing. Apply the hospital-news privacy, authorization, attribution, and result-status checks when relevant.
+- **Structure:** The purpose or conclusion is easy to find; the reader can identify the action or decision needed. Important points receive appropriate weight, paragraph relationships hold, and requested 3P states remain distinct.
+- **Expression:** The voice fits the reader and use, is direct and natural, and avoids empty slogans, repetitive transitions, forced symmetry, or unnecessary formality. Remove repetition from long sources; brief notes may expand into complete prose without adding unsupported content.
 
 ## Completion and missing information
 

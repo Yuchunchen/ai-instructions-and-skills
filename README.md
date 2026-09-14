@@ -4,7 +4,7 @@
 
 This private repository stores the source versions of personally maintained AI instructions and reusable Skills.
 
-The 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Codex Custom Instructions file remains a placeholder pending its own source import. Source changes do not install or activate configurations.
+The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, bringing the source inventory to 13 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import. Source changes do not install or activate configurations.
 
 ## Truth layers
 
@@ -63,3 +63,7 @@ Maintain each Skill as its complete folder: `SKILL.md` plus any linked `referenc
 The 2026-09-06 revision targets shared use by Astra and Sol. Five larger Skills route to optional references; short tasks keep essential instructions in the entrypoint. Validation results and installed state are recorded separately in Notion. A source revision or local test does not prove that the ChatGPT desktop installation has been updated or tested.
 
 For future source imports, read the actual configuration or original package. Do not reconstruct source from Notion, Memory, a Registry, or inferred settings. Import the Codex Custom Instructions only when its current source is available.
+
+## Task clarification
+
+[`task-clarification`](chatgpt/skills/task-clarification/SKILL.md) (任務釐清) helps turn an unclear request into a complete task instruction for the user to confirm before execution. Use it when the user deliberately chooses a clarification-first workflow. Keep its complete folder, including `agents/openai.yaml`, which preserves the display name and explicit-only invocation policy. GitHub storage does not establish ChatGPT installation or product behavior.

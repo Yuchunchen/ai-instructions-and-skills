@@ -4,7 +4,11 @@
 
 This private repository stores the source versions of personally maintained AI instructions and reusable Skills.
 
-The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, bringing the source inventory to 13 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import. Source changes do not install or activate configurations.
+The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, bringing the source inventory to 13 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
+
+Since 2026-09-16 the repository also holds a Claude surface under `claude/` (see [`claude/README.md`](claude/README.md)): six Skills for claude.ai / Cowork / Claude Code, five of them ports of the ChatGPT Skills with the same exact names, plus a Claude variant of `task-clarification`. Same-named Skills on the two surfaces are the same contract; each `SKILL.md` records its source commit and the specific differences.
+
+Source changes do not install or activate configurations.
 
 ## Truth layers
 
@@ -16,7 +20,8 @@ Stores:
 
 - ChatGPT About Me
 - ChatGPT Custom Instructions
-- ChatGPT Personal Skills
+- ChatGPT Personal Skills (`chatgpt/skills/`)
+- Claude Personal Skills (`claude/skills/`)
 - Codex Custom Instructions
 - future explicitly approved AI instruction sources
 
@@ -67,3 +72,5 @@ For future source imports, read the actual configuration or original package. Do
 ## Task clarification
 
 [`task-clarification`](chatgpt/skills/task-clarification/SKILL.md) (任務釐清) turns a directionally established request with missing key decisions or specifications into a complete task instruction. Use it only when the user explicitly asks for a clarification-first workflow or selects the skill, not merely because a task is ambiguous. Keep its complete folder, including `agents/openai.yaml`, which preserves the display name and enables implicit skill routing (`allow_implicit_invocation: true`) for matching requests. Existing authorization to execute after clarification carries forward. GitHub storage does not establish ChatGPT installation or product behavior.
+
+The Claude surface variant, [`claude/skills/task-clarification/SKILL.md`](claude/skills/task-clarification/SKILL.md), keeps the same trigger scope and deliverable but composes Claude's built-in AskUserQuestion and Plan mode instead of restating the questioning logic; it carries no `agents/openai.yaml`, so explicit-scope routing is expressed in its description.

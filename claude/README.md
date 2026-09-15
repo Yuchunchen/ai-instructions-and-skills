@@ -11,7 +11,7 @@
 | `multi-perspective-reviewer` | `chatgpt/skills/multi-perspective-reviewer` @ 0e85a78 | 無內容變更 |
 | `conversation-review` | `chatgpt/skills/conversation-review` @ 0e85a78 | 「邊界」段路由改為 Claude 端規則；步驟 8 設定物件名稱一般化 |
 | `write-like-yu-chun` | `chatgpt/skills/write-like-yu-chun` @ 0e85a78 | description 縮至 200 字元（claude.ai 上限），本文無變更 |
-| `task-clarification` | 對應 `chatgpt/skills/task-clarification` v1.1（Claude 版 v1.0-claude） | 不重寫提問邏輯；組合 AskUserQuestion → 任務指令 → 授權關卡 → 檔案變更才進 Plan mode |
+| `task-clarification` | 對應 `chatgpt/skills/task-clarification` @ 6f1d9f1（2026-09-16 concise workflow；Claude 版 v1.0-claude） | 不重寫提問邏輯；組合 AskUserQuestion → 任務指令 → 授權關卡 → 檔案變更才進 Plan mode。ChatGPT 版以 `agents/openai.yaml` 做 intent-scoped implicit routing，Claude 版以 description 表達同一觸發範圍 |
 
 未移植（Claude 已有等價機制或角色相反）：`claude-handoff`、`thread-handoff`、`work-handoff`。暫緩（部分重疊，待裁定）：`notion-capture`、`project-instruction-designer`、`iterative-work-planner`、`system-design-to-implementation-bridge`。
 
@@ -23,6 +23,8 @@
 
 ## 狀態與治理
 
+- 2026-09-16：PR #1 已 merge 至 `main`（merge commit 748d345）；本目錄自此為 Claude surface 的正式 Source。
+- 2026-09-16：六件已出現在 claude.ai 帳號的 skill 清單（Cowork session 工具清單可見），視為「帳號已儲存」；自動觸發與 references 載入行為仍未測。
 - GitHub 是 Source；claude.ai 帳號內是否已儲存、載入與觸發行為需另行驗證，Source 不證明 Runtime。
 - 治理與版本紀錄在 Notion Skills Registry；Claude surface 的登錄目前以 `[Cowork]` 區塊附註，尚無正式欄位。
 - 修改規則同 repo README：read-first、最小完整變更、保留 Git history。同名 Skill 在兩個 surface 各自演進時，在各自的 `SKILL.md` 版本行標明對應關係。

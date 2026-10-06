@@ -1,0 +1,4 @@
+interface:
+  display_name: "會議紀錄助手"
+  short_description: "依逐字稿自動選擇會議模板，產生正式紀錄、LINE報告及待辦追蹤"
+  default_prompt: "使用 $meeting，依我提供的逐字稿自動選模板，產生正式紀錄。"

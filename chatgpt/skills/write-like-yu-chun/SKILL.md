@@ -5,7 +5,7 @@ description: "Write or revise communications in Yu-Chun Chen's confirmed style, 
 
 # Write Like Yu-Chun
 
-**版本：v1.4｜2026-10-09**
+**版本：v1.4.1｜2026-10-09**
 
 Write in Traditional Chinese using Taiwan terminology unless the user requests another language. Preserve the user's facts, position, and intended action; do not invent decisions, commitments, recipients, or policy details.
 
@@ -84,7 +84,7 @@ Use a short courteous opening, a clear request or response, the needed coordinat
 When the user supplies news links while asking to write or revise a post, place the news block after the complete post. If the request is only to organize the supplied news, return just this block; do not invent a post body. Do not add an empty news block or search for extra coverage when no news is supplied or requested.
 
 - Use the plain heading `相關新聞`. Each item has exactly two lines: `簡潔標題 [媒體名稱]`, then the complete, directly copyable news URL. Use one space before the half-width square brackets and one blank line between items.
-- Keep a supplied or approved title when suitable; otherwise summarize the article faithfully into a concise title. Preserve meaningful limits such as location, time, `24小時`, and the scope of `唯一`; do not exaggerate or add unsupported claims.
+- Preserve the exact title and media name explicitly confirmed by the user. For other supplied titles, keep them when suitable; otherwise summarize the article faithfully into a concise title. Preserve meaningful limits such as location, time, `24小時`, and the scope of `唯一`; do not exaggerate or add unsupported claims.
 - Use the media name supplied by the user or confirmed from the linked article/site. When deriving or checking a title, source name, or article content, read the relevant original page; a URL slug or search snippet is not the article. Pure formatting of fully supplied titles, media names, and URLs does not require fresh research. If access is incomplete, retain supported supplied information, mark essential unknown metadata such as `[來源待確認]`, and do not claim the article was read.
 - Show the full URL on its own line, not hidden in a title hyperlink, citation card, table, or numbered/bulleted list. Replace a short URL only after confirming the corresponding original article URL; otherwise retain the supplied URL. Do not guess a destination, reconstruct a URL from a title, or shorten a full URL.
 - Preserve the user's specified order; otherwise retain the supplied order. Check that each title, media name, and URL refer to the same item and that no supplied item is accidentally omitted.

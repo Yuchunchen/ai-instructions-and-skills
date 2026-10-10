@@ -1,9 +1,9 @@
 interface:
-  display_name: "thread handoff"
-  short_description: "換到新 ChatGPT 討論串時，保留決策理由、修正與接續計畫，防止交班遺漏。"
-  default_prompt: "使用 $thread-handoff 產生防遺漏交班稿，保留重要決策與修正歷程，附上必要的接續計畫。"
-  icon_small: "assets/icon.svg"
-  icon_large: "assets/icon.svg"
+  display_name: thread handoff
+  short_description: 換到新 ChatGPT 討論串時，保留決策理由、修正與接續計畫，防止交班遺漏。
+  default_prompt: 使用 $thread-handoff 產生防遺漏交班稿，保留重要決策與修正歷程，附上必要的接續計畫。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
 policy:
   products:
   - chatgpt

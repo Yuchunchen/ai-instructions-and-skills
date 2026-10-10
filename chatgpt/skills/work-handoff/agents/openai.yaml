@@ -1,0 +1,13 @@
+interface:
+  display_name: "work handoff"
+  short_description: "接手者未定、其他環境或多目的地交班時，保留完整決策脈絡與接續計畫。"
+  default_prompt: "使用 $work-handoff 整理中立交班核心，保留決策理由、修正與嘗試結果，列明下一步。"
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

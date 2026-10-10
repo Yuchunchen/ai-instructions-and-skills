@@ -1,0 +1,13 @@
+interface:
+  display_name: "notion capture"
+  short_description: "保存討論決策、結論與學習歷程，或整理知識變化；授權寫入 Notion 後回讀驗證。"
+  default_prompt: "使用 $notion-capture 整理本次討論的決策、結論與學習歷程，先交付草稿。"
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

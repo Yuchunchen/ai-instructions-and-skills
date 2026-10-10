@@ -98,3 +98,13 @@ The Claude surface variant, [`claude/skills/task-clarification/SKILL.md`](claude
 完整保留 `chatgpt/skills/meeting/`，包含 `references/`、`scripts/`、`agents/`。文字整理不需要Notion或額外安裝其他技能；音訊轉錄取決於執行環境實際可用的工具，機械字數檢查需Python 3。存入GitHub或通過本地檢查，不表示已安裝或啟用於任何產品。
 
 設計參考：[meeting-notes-and-actions](https://github.com/composio-community/awesome-codex-skills/tree/master/meeting-notes-and-actions) 的紀錄／待辦流程、[meeting-insights-analyzer](https://github.com/composio-community/awesome-codex-skills/tree/master/meeting-insights-analyzer) 的來源舉證及選用檢視、[notion-meeting-intelligence](https://github.com/composio-community/awesome-codex-skills/tree/master/notion-meeting-intelligence) 的六種會議分類。本版依使用者要求重寫為會後整理規則；三者是設計參考，不是執行依賴。
+
+## Handoff and discussion learning records
+
+The 2026-10-10 update preserves the existing entrypoints: `thread-handoff` v1.4, `claude-handoff` v1.4, `work-handoff` v1.3, and `notion-capture` v1.4.
+
+Handoffs retain decision reasons, user corrections, relevant alternatives, attempted approaches, evidence, existing authorization, and a concrete next action. Use a continuation plan when requested or needed for multi-step work. Coverage is checked against the visible source material; line counts are not a quality target.
+
+`notion-capture` adds a **討論決策與學習紀錄** mode for conclusions and their development across the requested discussion. It preserves meaningful exploration and clearly marked tentative observations without treating them as approved or validated knowledge. A handoff plus learning record reuses one complete inventory. A request to hand off alone does not authorize a Notion write; an explicit combined save request carries its existing authorization through write and readback.
+
+Maintain the common references from `chatgpt/skills/work-handoff/references/context-ledger.md` and `handoff-plan.md`. Distribute byte-identical local copies of the former in all four packages and the latter in the three handoff packages, so each package works without another skill installed. Keep complete folders, including references, UI metadata, and referenced icons. Verify GitHub source, account-stored package contents, and actual runtime behavior separately.

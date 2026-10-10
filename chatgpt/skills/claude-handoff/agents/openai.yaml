@@ -1,0 +1,13 @@
+interface:
+  display_name: "claude handoff"
+  short_description: "交給 Claude 接手時，保留決策歷程、既有授權、嘗試結果與驗證要求。"
+  default_prompt: "使用 $claude-handoff 整理交給 Claude 的工作脈絡、授權與必要接續計畫。"
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -32,7 +32,7 @@
 * Claude 負責長文件整合、正式版本與一致性
 * 使用者負責裁定
 
-### Mode D｜ChatGPT Work／Claude Cowork 執行
+### Mode D｜ChatGPT Work／Claude 代理工作（原 Cowork） 執行
 
 適合：
 
@@ -159,7 +159,9 @@
 * 只接收已定案或清楚標示暫定的內容
 * 不自行改變策略
 
-## Claude Cowork
+## Claude 代理工作（原 Cowork）
+
+2026-11-10 起，組織帳號的 Chat 與 Cowork 合併為同一個 Claude 介面；本節指其中的多步驟代理執行能力，不再是獨立產品名。
 
 適合：
 

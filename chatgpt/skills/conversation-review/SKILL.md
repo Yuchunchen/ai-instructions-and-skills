@@ -5,7 +5,7 @@ description: "整理目前可見討論的進度、決策、矛盾與未解問題
 
 # Conversation Review
 
-**版本：v1.3｜2026-09-06**
+**版本：v1.3.1｜2026-10-11**（v1.3 2026-09-06；v1.3.1 僅更新 Cowork 名稱）
 
 將目前可見的討論整理成可靠的階段性檢視，不要把它誤寫成跨 AI 交班稿。
 
@@ -81,7 +81,7 @@ description: "整理目前可見討論的進度、決策、矛盾與未解問題
 ## 邊界
 
 - 使用者明確要求開新 ChatGPT 討論串時，改用 `thread-handoff`。
-- 使用者明確要求交給 Claude 或 Cowork 時，改用 `claude-handoff`。
+- 使用者明確要求交給 Claude（含原 Cowork 代理工作）時，改用 `claude-handoff`。
 - 使用者要求保存到 Notion 時，可同時使用 `notion-capture`。
 - 使用者只說「幫我交班」但未指定接手者時，改用 `work-handoff`。
 - 若收斂結果會影響 Architecture、Setup Log、instruction snapshot 或 canonical，記錄 Configuration Delta 與待處理事項。使用者要求保存時可使用 `notion-capture`；只有確實交給 Claude 接手時才使用 `claude-handoff`，不因檢視到 Notion 或正式文件變更就自動交班。

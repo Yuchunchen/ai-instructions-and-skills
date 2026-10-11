@@ -12,7 +12,7 @@
 
 * 計畫主持人
 * 計畫書 Thread 使用者
-* Claude／Cowork 正式整合者
+* Claude（含原 Cowork 代理工作）正式整合者
 * 模組負責人
 * 維護者
 * 最終送件行政窗口
@@ -35,7 +35,7 @@
 
 * 不知道應提供什麼格式、何時提供、交給哪個 Thread。
 
-### Claude／Cowork
+### Claude（含原 Cowork 代理工作）
 
 可能疑慮：
 

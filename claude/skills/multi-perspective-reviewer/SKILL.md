@@ -5,7 +5,7 @@ description: "從必要的利害關係人視角審查既有方案，找出執行
 
 # Multi-perspective Reviewer
 
-**來源修訂：2026-09-06｜第二輪檢查後修訂；原文未標語意版本**
+**來源修訂：2026-09-06｜第二輪檢查後修訂；原文未標語意版本｜2026-10-11 references 的 Cowork 名稱更新**
 **Claude port：2026-09-15｜來源 `chatgpt/skills/multi-perspective-reviewer` @ 0e85a78｜差異：無內容變更，僅加本行**
 
 ## 目的與使用邊界

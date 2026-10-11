@@ -90,7 +90,7 @@
 * 說明哪些步驟可自動化
 * 保留人類核准點
 * 定義輸入、輸出、錯誤處理與回復
-* 程式工作預設由 Claude／Claude Code 承接；使用者指定或既有環境適合時選 Codex／Cowork
+* 程式工作預設由 Claude／Claude Code 承接；使用者指定或既有環境適合時選 Codex／Claude 代理工作（原 Cowork）
 * 必要時使用 Claude Handoff
 * 先建立測試環境
 * 驗證後才正式啟用

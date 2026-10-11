@@ -1,0 +1,7 @@
+{
+  "name": "yc-skills",
+  "description": "Yu-Chun Chen's personal Claude skills (Claude ports of the ChatGPT skills in this repo).",
+  "author": {
+    "name": "Yu-Chun Chen"
+  }
+}

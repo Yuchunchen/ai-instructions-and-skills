@@ -1,11 +1,13 @@
 ---
 name: claude-handoff
-description: "已確認交給 Claude Chat、Project、Cowork 或 Code 時，產生防遺漏交班與所需計畫。程式、Notion 或設定工作本身不觸發交班。"
+description: "已確認交給 Claude（Chat、代理工作／原 Cowork、Project）或 Claude Code 時，產生防遺漏交班與所需計畫。程式、Notion 或設定工作本身不觸發交班。"
 ---
 
 # Claude Handoff
 
-**版本：v1.5｜2026-10-11**
+**版本：v1.6｜2026-10-11**
+
+v1.6：Cowork 併入 Claude 介面（組織帳號 2026-11-10 全面切換），僅更新名稱，路由不變。
 
 交付 Claude 可接續的工作脈絡、授權與驗證要求。保留標記 `[ChatGPT-Delta｜for Claude]`，不將第二意見設成所有工作的必經核准。
 

@@ -5,7 +5,7 @@ description: "整理 Knowledge Delta、討論學習紀錄或可接續工作狀�
 
 # Notion Knowledge and Learning Capture
 
-**版本：v1.5｜2026-10-11**
+**版本：v1.6｜2026-10-11**
 
 按用途保存知識與學習脈絡。Notion 保存治理、版本、長期知識及已授權的工作狀態；AI Instructions／Skills 原文以 GitHub 為 Source Canonical，產品帳號保存內容與實際 UI／Runtime 生效狀態分開驗證。
 
@@ -13,7 +13,7 @@ description: "整理 Knowledge Delta、討論學習紀錄或可接續工作狀�
 
 - **Knowledge Delta**：使用者要可重用的新決策、方法或知識變化時，保留 `[ChatGPT｜Knowledge Delta]`。只取具有長期價值的內容並標示確定性。
 - **討論決策與學習紀錄**：使用者要保存這次／整個對話的決策、最後結論與形成過程供日後學習時，讀 [學習紀錄](references/learning-record.md)，保留 `[ChatGPT｜Discussion Learning Record]`。包含有意義的探索、修正、失敗與未解問題，不以「尚未成為可重用知識」為由刪除。
-- **工作狀態／Checkpoint**：使用者要保存進度供續作時，保留 `[ChatGPT｜Work State]`，依下方契約記主線、分支、成果與下一步。它不取代學習紀錄；只有要求兩者才分別保存。
+- **工作狀態／Checkpoint**：使用者要保存進度供續作時，標籤 `[Work State]` 標示實際寫入者（ChatGPT 寫入用 `[ChatGPT｜Work State]`，其他 AI 寫入改用其名稱），依下方契約記主線、分支、成果與下一步。它不取代學習紀錄；只有要求兩者才分別保存。
 - **設定快照**：設定或 skill 版本紀錄，按下方規則保存版本與實際狀態。
 - **完整交班保存**：使用者明確要求時保存交班稿，標示「工作交班暫存，非正式知識／canonical」。不要用它取代學習紀錄。
 
@@ -33,6 +33,8 @@ description: "整理 Knowledge Delta、討論學習紀錄或可接續工作狀�
 ## 工作狀態／Checkpoint
 
 沿用既有計畫的穩定 plan_id、step_id、plan_revision，保存目標／範圍與完成條件、未完成主線、分支 parent／return_to、逐項已採用／已否決／待驗證結果，以及受影響依賴。沒有既有 ID 時給出案內穩定識別，不冒充來源既有編號；保留修訂差異與裁定依據。改變目標、範圍或重要取捨須由使用者裁定。
+
+每次寫入工作狀態都更新 `last_writer`（AI／介面／時間）。接續前若 `last_writer` 不是自己、且晚於自己上次讀取，先重讀全頁再寫；它只用來辨識誰最後寫入，不代表鎖定。
 
 Checkpoint 帶入已驗證成果的位置、版本與證據，未同步或結果不明的外部操作（標的／可用 ID／最後結果／回查方式）、阻塞與下一個可執行動作。只記錄必要狀態與來源連結；GitHub／正式文件仍是原始 artifact 的來源，不把 Notion 工作狀態變成第二份可編輯 SOP。
 

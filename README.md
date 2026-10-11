@@ -6,7 +6,7 @@ This private repository stores the source versions of personally maintained AI i
 
 The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification` and `meeting`, bringing the ChatGPT source inventory to 14 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
 
-Since 2026-09-16 the repository also holds a Claude surface under `claude/` (see [`claude/README.md`](claude/README.md)): six Skills for claude.ai / Cowork / Claude Code, five of them ports of the ChatGPT Skills with the same exact names, plus a Claude variant of `task-clarification`. Same-named Skills on the two surfaces are the same contract; each `SKILL.md` records its source commit and the specific differences.
+Since 2026-09-16 the repository also holds a Claude surface under `claude/` (see [`claude/README.md`](claude/README.md)): seven Skills for claude.ai / Cowork / Claude Code, six of them ports of the ChatGPT Skills with the same exact names (`iterative-work-planner` added 2026-10-11), plus a Claude variant of `task-clarification`. Same-named Skills on the two surfaces are the same contract; each `SKILL.md` records its source commit and the specific differences.
 
 Source changes do not install or activate configurations.
 

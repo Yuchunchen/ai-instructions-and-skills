@@ -1,18 +1,19 @@
 ---
 name: notion-capture
-description: "整理 Knowledge Delta，或保留討論決策、結論與演變供日後學習；明確要求寫入 Notion 時，依授權讀取、更新並回讀驗證。只要草稿不寫入。"
+description: "整理 Knowledge Delta、討論學習紀錄或可接續工作狀態；明確要求寫入 Notion 時，依授權讀取、更新並回讀驗證。只要草稿不寫入。"
 ---
 
 # Notion Knowledge and Learning Capture
 
-**版本：v1.4｜2026-10-10**
+**版本：v1.5｜2026-10-11**
 
-按用途保存知識與學習脈絡。Notion 保存治理、版本與長期知識；AI Instructions／Skills 原文以 GitHub 為 Source Canonical，產品帳號保存內容與實際 UI／Runtime 生效狀態分開驗證。
+按用途保存知識與學習脈絡。Notion 保存治理、版本、長期知識及已授權的工作狀態；AI Instructions／Skills 原文以 GitHub 為 Source Canonical，產品帳號保存內容與實際 UI／Runtime 生效狀態分開驗證。
 
 ## 選擇輸出模式
 
 - **Knowledge Delta**：使用者要可重用的新決策、方法或知識變化時，保留 `[ChatGPT｜Knowledge Delta]`。只取具有長期價值的內容並標示確定性。
 - **討論決策與學習紀錄**：使用者要保存這次／整個對話的決策、最後結論與形成過程供日後學習時，讀 [學習紀錄](references/learning-record.md)，保留 `[ChatGPT｜Discussion Learning Record]`。包含有意義的探索、修正、失敗與未解問題，不以「尚未成為可重用知識」為由刪除。
+- **工作狀態／Checkpoint**：使用者要保存進度供續作時，保留 `[ChatGPT｜Work State]`，依下方契約記主線、分支、成果與下一步。它不取代學習紀錄；只有要求兩者才分別保存。
 - **設定快照**：設定或 skill 版本紀錄，按下方規則保存版本與實際狀態。
 - **完整交班保存**：使用者明確要求時保存交班稿，標示「工作交班暫存，非正式知識／canonical」。不要用它取代學習紀錄。
 
@@ -28,6 +29,16 @@ description: "整理 Knowledge Delta，或保留討論決策、結論與演變�
 - 使用者要求保存探索歷程時，可記錄一次性觀察、暫定假設及未完成工作，明示其狀態，不升格為已驗證知識或長期偏好。
 - 排除金鑰、密碼與用途不需要的個資；不自動保存完整聊天。
 - 中文用繁體中文與台灣用語；保留重要原詞、數字、版本和可追溯來源。
+
+## 工作狀態／Checkpoint
+
+沿用既有計畫的穩定 plan_id、step_id、plan_revision，保存目標／範圍與完成條件、未完成主線、分支 parent／return_to、逐項已採用／已否決／待驗證結果，以及受影響依賴。沒有既有 ID 時給出案內穩定識別，不冒充來源既有編號；保留修訂差異與裁定依據。改變目標、範圍或重要取捨須由使用者裁定。
+
+Checkpoint 帶入已驗證成果的位置、版本與證據，未同步或結果不明的外部操作（標的／可用 ID／最後結果／回查方式）、阻塞與下一個可執行動作。只記錄必要狀態與來源連結；GitHub／正式文件仍是原始 artifact 的來源，不把 Notion 工作狀態變成第二份可編輯 SOP。
+
+接續先讀最新工作狀態與將使用的來源，比對 checkpoint 後更新；不從舊對話直接覆寫。寫入前按 [Notion 寫入與驗證](references/notion-write.md) 比較基線／現況／擬議修改，只改已授權段落。單一寫入者是協作約定，不是鎖或原子性保證。
+
+分開記來源保存、帳號內容保存／回讀、適用的 Notion 狀態回讀與 Runtime 證據；必要目的地失敗或未確認時保留待辦，不能報全部完成。未授權 Notion 寫入時只交付工作狀態草稿。
 
 ## Knowledge Delta 的範圍與格式
 

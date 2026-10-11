@@ -126,7 +126,7 @@
 * 系統維護人員
 * 知識管理者
 * 文件 Owner
-* Claude／Cowork 操作人員
+* Claude（含原 Cowork 代理工作）操作人員
 * 資訊室
 * 專案辦公室
 

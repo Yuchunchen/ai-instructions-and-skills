@@ -5,7 +5,7 @@ description: "將已收斂、但尚未決定工具配置與操作方式的系統
 
 # System Design to Implementation Bridge
 
-**版本：v1.0｜2026-10-11**
+**版本：v1.0.1｜2026-10-11**（v1.0.1：references 中 Cowork 名稱更新，契約不變）
 
 前版來源修訂：2026-09-06，未標語意版本；本版開始編版。
 

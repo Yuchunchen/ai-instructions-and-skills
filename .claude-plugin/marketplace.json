@@ -1,0 +1,12 @@
+{
+  "name": "yc-ai-skills",
+  "description": "Private marketplace for Yu-Chun Chen's Claude skills; source canonical is this repository.",
+  "owner": { "name": "Yu-Chun Chen" },
+  "plugins": [
+    {
+      "name": "yc-skills",
+      "source": "./claude",
+      "description": "Claude ports: unknown-pass, evidence-red-team-reviewer, multi-perspective-reviewer, conversation-review, write-like-yu-chun, task-clarification, iterative-work-planner"
+    }
+  ]
+}

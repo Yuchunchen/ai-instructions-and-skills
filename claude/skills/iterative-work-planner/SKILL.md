@@ -5,7 +5,7 @@ description: "將目標、範圍與主要做法已確認的多步驟工作，拆
 
 # Iterative Work Planner
 
-**版本：v1.0｜2026-10-11**
+**版本：v1.0.1｜2026-10-11**（v1.0.1：planning-guide 的 Cowork 名稱更新，契約不變）
 **Claude port：2026-10-11｜來源 `chatgpt/skills/iterative-work-planner` @ d0064e8｜差異：「主線、分支與可恢復進度」段補 Claude 寫入 Notion 工作狀態的最小規則（Claude 端沒有 notion-capture）；「協作與呈現」段移除 ChatGPT handoff Skill 路由；其餘原文保留，`references/` 與 ChatGPT 版 SHA-256 相同**
 
 前版來源修訂：2026-09-06，未標語意版本；本版開始編版。

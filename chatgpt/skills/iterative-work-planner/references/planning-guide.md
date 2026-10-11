@@ -256,7 +256,7 @@ Approval Gate 必須定義：
 
 ### AI Support
 
-ChatGPT、Claude、Cowork、Codex 或其他工具的協助角色。
+ChatGPT、Claude（含原 Cowork 代理工作）、Codex 或其他工具的協助角色。
 
 ### Input
 

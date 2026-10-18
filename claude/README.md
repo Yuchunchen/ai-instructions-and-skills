@@ -1,6 +1,6 @@
 # Claude Skills
 
-`claude/skills/` 是 Claude surface（claude.ai Web／Desktop，含原 Cowork 代理工作；Claude Code）的 Skill Source。與 `chatgpt/skills/` 同名的 Skill 是同一契約的 Claude 移植版；差異只在每個 `SKILL.md` 第 8 行的「Claude port」註記所列項目，其餘逐行相同，`references/` 與 ChatGPT 版 SHA-256 相同。
+`claude/skills/` 是 Claude surface（claude.ai Web／Desktop，含原 Cowork 代理工作；Claude Code）的 Skill Source。與 `chatgpt/skills/` 同名的 Skill 是同一契約的 Claude 移植版；差異只在每個 `SKILL.md` 的「Claude port」註記所列項目，其餘逐行相同，`references/` 與 ChatGPT 版 SHA-256 相同。
 
 ## 內容（2026-09-15；2026-10-11 增補）
 
@@ -12,7 +12,7 @@
 | `conversation-review` | `chatgpt/skills/conversation-review` @ 0e85a78 | 「邊界」段路由改為 Claude 端規則；步驟 8 設定物件名稱一般化 |
 | `write-like-yu-chun` | `chatgpt/skills/write-like-yu-chun` @ ff24abe（v1.5.0，2026-10-11 重新移植；前版 v1.3 @ 0e85a78） | 無內容變更；description 恢復完整版；含 `references/`、`evals/` |
 | `task-clarification` | 對應 `chatgpt/skills/task-clarification` @ 6f1d9f1（2026-09-16 concise workflow；Claude 版 v1.0-claude） | 不重寫提問邏輯；組合 AskUserQuestion → 任務指令 → 授權關卡 → 檔案變更才進 Plan mode。ChatGPT 版以 `agents/openai.yaml` 做 intent-scoped implicit routing，Claude 版以 description 表達同一觸發範圍 |
-| `iterative-work-planner` | `chatgpt/skills/iterative-work-planner` @ d0064e8（v1.0，2026-10-11 移植） | 補 Claude 寫入 Notion 工作狀態的最小規則（含 `last_writer`）；移除 ChatGPT handoff 路由；references 相同 |
+| `iterative-work-planner` | `chatgpt/skills/iterative-work-planner` @ d92778708cdaea3f8a3ffe3b3c92fd0aba03851e（v1.1.0，2026-10-18 同步） | 保留 Claude Notion 寫入規則（含 `last_writer`）及 handoff 限制；同步接續、分支回收、順序修訂與證據失效處理；references 與來源相同 |
 
 未移植（Claude 已有等價機制或角色相反）：`claude-handoff`、`thread-handoff`、`work-handoff`。暫緩（部分重疊，待裁定）：`notion-capture`、`project-instruction-designer`、`system-design-to-implementation-bridge`。`iterative-work-planner` 已於 2026-10-11 移植，承接跨 AI 主線（`cross-ai-resumable-workflow`）的 Claude 端寫入。
 
@@ -29,6 +29,8 @@
 - `agents/openai.yaml` 為 ChatGPT／Codex 專用，Claude 不讀取，本目錄不保留。Claude 沒有 `allow_implicit_invocation` 的對應機制，explicit-only 以 description 字句實現。
 
 ## 狀態與治理
+
+- 2026-10-18：`iterative-work-planner` Claude source 同步至 ChatGPT v1.1.0（來源 d92778708cdaea3f8a3ffe3b3c92fd0aba03851e）；含兩份 references 與六個接續驗收案例。來源同步／封裝不代表 Claude 帳號已載入；實際安裝、觸發與跨對話 Runtime 驗證仍須另行確認。
 
 - 2026-09-16：PR #1 已 merge 至 `main`（merge commit 748d345）；本目錄自此為 Claude surface 的正式 Source。
 - 2026-10-11：Claude session 讀取組織層 6 件 skill，內容與本目錄一致（僅檔尾換行差異），references 齊全。

@@ -4,7 +4,7 @@
 
 This private repository stores the source versions of personally maintained AI instructions and reusable Skills.
 
-The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification` and `meeting`, bringing the ChatGPT source inventory to 14 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
+The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, `meeting`, and `work-retrospective`, bringing the ChatGPT source inventory to 15 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
 
 Since 2026-09-16 the repository also holds a Claude surface under `claude/` (see [`claude/README.md`](claude/README.md)): seven Skills for claude.ai (Chat and agentic work, formerly Cowork) / Claude Code, six of them ports of the ChatGPT Skills with the same exact names (`iterative-work-planner` added 2026-10-11), plus a Claude variant of `task-clarification`. Same-named Skills on the two surfaces are the same contract; each `SKILL.md` records its source commit and the specific differences.
 
@@ -108,3 +108,7 @@ Handoffs retain decision reasons, user corrections, relevant alternatives, attem
 `notion-capture` adds a **討論決策與學習紀錄** mode for conclusions and their development across the requested discussion. It preserves meaningful exploration and clearly marked tentative observations without treating them as approved or validated knowledge. A handoff plus learning record reuses one complete inventory. A request to hand off alone does not authorize a Notion write; an explicit combined save request carries its existing authorization through write and readback.
 
 Maintain the common references from `chatgpt/skills/work-handoff/references/context-ledger.md` and `handoff-plan.md`. Distribute byte-identical local copies of the former in all four packages and the latter in the three handoff packages, so each package works without another skill installed. Keep complete folders, including references, UI metadata, and referenced icons. Verify GitHub source, account-stored package contents, and actual runtime behavior separately.
+
+## Change review and retrospective
+
+The 2026-10-18 ChatGPT-source update adds optional change/evidence closeout to [conversation-review](chatgpt/skills/conversation-review/SKILL.md) v1.4.0 and introduces [work-retrospective](chatgpt/skills/work-retrospective/SKILL.md) v1.0.0. The former supports requested PR-body drafts without publishing them; the latter proposes evidence-backed process improvements without automatically changing instructions, permissions or Notion. Both return next actions to the existing plan rather than creating a competing mainline. Preserve their complete reference folders. Claude ports, account package contents and runtime behavior require separate updates and verification.

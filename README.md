@@ -4,7 +4,7 @@
 
 This private repository stores the source versions of personally maintained AI instructions and reusable Skills.
 
-The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, `meeting`, and `work-retrospective`, bringing the ChatGPT source inventory to 15 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
+The original 14 ChatGPT sources (About Me, Custom Instructions, and 12 Skills) have been imported and are maintained here. The Skills collection now also includes `task-clarification`, `meeting`, `work-retrospective`, and `vhyl-batch-approve`, bringing the ChatGPT source inventory to 16 Skills. The Codex Custom Instructions file remains a placeholder pending its own source import.
 
 Since 2026-09-16 the repository also holds a Claude surface under `claude/` (see [`claude/README.md`](claude/README.md)): seven Skills for claude.ai (Chat and agentic work, formerly Cowork) / Claude Code, six of them ports of the ChatGPT Skills with the same exact names (`iterative-work-planner` added 2026-10-11), plus a Claude variant of `task-clarification`. Same-named Skills on the two surfaces are the same contract; each `SKILL.md` records its source commit and the specific differences.
 
@@ -112,3 +112,11 @@ Maintain the common references from `chatgpt/skills/work-handoff/references/cont
 ## Change review and retrospective
 
 The 2026-10-18 ChatGPT-source update adds optional change/evidence closeout to [conversation-review](chatgpt/skills/conversation-review/SKILL.md) v1.4.0 and introduces [work-retrospective](chatgpt/skills/work-retrospective/SKILL.md) v1.0.0. The former supports requested PR-body drafts without publishing them; the latter proposes evidence-backed process improvements without automatically changing instructions, permissions or Notion. Both return next actions to the existing plan rather than creating a competing mainline. Preserve their complete reference folders. Claude ports, account package contents and runtime behavior require separate updates and verification.
+
+## Hospital approval shortcut
+
+[`vhyl-batch-approve`](chatgpt/skills/vhyl-batch-approve/SKILL.md)（院內表單整批同意）將使用者在指定院內簽核頁面的「同意」指令，轉成「全部同意 → 確定 → 待簽核表單」的逐批處理，直到重新載入後確認清空。限定 `am2.vhyl.gov.tw` 的目前帳號待辦；否定、提問、引文與 skill 設定討論不啟動。當次較窄的表單範圍優先。
+
+保留完整的 `chatgpt/skills/vhyl-batch-approve/`，包含 Browser 操作回查參考與啟用隱含調用的 `agents/openai.yaml`。正式操作依賴當下可用的 Browser 控制能力與已登入的院內頁面；送出逾時先查證結果，避免重複送出。技能測試使用模擬狀態，不為測試再次簽核真實表單。
+
+私人外掛的 [封裝 manifest](chatgpt/plugins/vhyl-batch-approve/plugin.json) 另行維護；重建時將它置於外掛根目錄 `plugin.json`，並將完整技能目錄置於 `skills/vhyl-batch-approve/`。原始碼、帳號保存內容與實際執行結果仍須分別驗證。

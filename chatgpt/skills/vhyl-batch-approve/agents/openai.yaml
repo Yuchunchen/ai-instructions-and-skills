@@ -1,0 +1,6 @@
+interface:
+  display_name: "院內表單整批同意"
+  short_description: "在院內待簽核頁面說同意，即逐批同意、送出並核對直到清空"
+  default_prompt: "使用 $vhyl-batch-approve，將目前院內待簽核表單全部同意並送出，逐批核對直到清空。"
+policy:
+  allow_implicit_invocation: true

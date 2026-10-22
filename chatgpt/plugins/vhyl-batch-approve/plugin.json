@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vhyl-batch-approve",
+  "version": "1.0.0",
+  "description": "在院內待簽核頁面收到同意指令時，依序全部同意、確定並重新開啟待簽核表單，逐批核對直到清空。",
+  "repository": "https://github.com/Yuchunchen/ai-instructions-and-skills",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "院內表單整批同意",
+        "shortDescription": "說同意後，逐批簽核並核對直到清空",
+        "longDescription": "在 am2.vhyl.gov.tw 的 ChatGPT in Chrome 對話中，下達同意或整批同意指令，即執行全部同意 → 確定 → 待簽核表單，逐批核對直到清空。保留明確的範圍限制、送出後回查與中斷恢復規則。需要當前環境可用的 Browser 控制能力及已登入的院內頁面。",
+        "category": "Productivity",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": "使用 $vhyl-batch-approve，將目前院內待簽核表單全部同意並送出，逐批核對直到清空。"
+      }
+    }
+  }
+}

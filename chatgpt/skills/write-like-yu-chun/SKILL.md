@@ -5,7 +5,7 @@ description: "Write or revise communications in Yu-Chun Chen's confirmed style, 
 
 # Write Like Yu-Chun
 
-**版本：v1.5.0｜2026-10-11**
+**版本：v1.6.0｜2026-10-27**
 
 Write in Traditional Chinese using Taiwan terminology unless the user requests another language. Preserve the user's facts, position, and intended action; do not invent decisions, commitments, recipients, or policy details.
 
@@ -68,6 +68,19 @@ Keep warmth without promotional language. Attribute contributions fairly and tha
 - Completed results, ongoing work, planned actions, and expected benefits are clearly distinguished.
 - Cross-unit achievements are not over-attributed to one person or unit.
 - External news releases, incident communications, and sensitive policy explanations are marked for confirmation by the responsible authority.
+
+#### Firsthand internal achievement sharing
+
+Use this approach for an internal story in which the author has personally seen a result and wants colleagues to share the sense of change. Keep it specific to this purpose; do not impose it on routine notices, executive reports, policy explanations, or external official news releases. Respect `小修` and `保留我的版本`; this subsection does not authorize restructuring an otherwise usable draft.
+
+- **Show what happened before explaining its meaning.** Use supplied scenes, workflow steps, functions, and people's actual reactions as the main material. When provided and useful, begin with what the author saw or tried. Describe the old task and the concrete change: who does what, which action changes, and what the tool produces. Preserve supported costs, timeframes, and quantities; never supply a personal experience, dialogue, reaction, or result to make the story vivid.
+- **Let details carry the feeling.** Preserve the author's genuine excitement, surprise, frustration, gratitude, and judgment when supported by the material. Do not smooth them into a flat explanation or substitute generic declarations of being moved. Natural questions, colloquial comparisons, and emphasis can serve the story; none is a required template.
+- **Make functions concrete and judgments focused.** Let colleagues understand how their work changes, then state a few clear implications. When the material supports a positive conclusion, express it directly instead of repeatedly retreating to `是否可能`, `值得思考`, or `值得期待`.
+- **Show the team's work, then give specific thanks.** Name people and describe their contributions only as supplied or verified. Let the preceding work give appreciation its substance; do not add a long explanation of why teamwork or gratitude matters.
+- **Stop when the point is established.** Once the example supports the central judgment, close. Avoid repeating the same lesson, adding several conclusions, or attaching an unsupported next step. Retain functional detail rather than shortening it merely to make room for abstract commentary.
+- **Keep confidence aligned with the evidence.** Preserve distinctions among a demonstration, an operable tool, routine use, and verified benefit. Keep material conditions near the relevant claim, without adding generic risk paragraphs or inventing concerns, testing plans, or maintenance commitments. A stronger voice must not turn an aspiration into a result or imply that required review steps have disappeared.
+
+**Optional detail reminders:** When a few missing details would materially strengthen this type of story, proactively offer a short, nonblocking reminder about one to three useful gaps: a firsthand moment; a specific before-and-after task or function; or the team's actual contribution, reaction, or current use status. Ask about cost or time only when relevant to the supplied story. Use what is already known, and do not repeat answered questions or require a fixed questionnaire. Complete a usable draft from supported material in the same response; pause only for a missing fact that materially changes the claim or intended use. Keep the reminder in a brief working note or commentary outside the ready-to-use draft, never inside it or after `相關新聞`. If the material is sufficient or the user requests only the finished text, deliver the draft directly.
 
 ### Appreciation and encouragement
 

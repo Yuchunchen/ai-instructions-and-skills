@@ -6,7 +6,7 @@
     {
       "name": "yc-skills",
       "source": "./claude",
-      "description": "Claude ports: unknown-pass, evidence-red-team-reviewer, multi-perspective-reviewer, conversation-review, write-like-yu-chun, task-clarification, iterative-work-planner"
+      "description": "Claude ports: unknown-pass, evidence-red-team-reviewer, multi-perspective-reviewer, conversation-review, write-like-yu-chun, task-clarification, iterative-work-planner; Claude-native: threads-radar"
     }
   ]
 }

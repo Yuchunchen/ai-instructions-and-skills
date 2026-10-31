@@ -1,6 +1,6 @@
 {
   "name": "yc-skills",
-  "description": "Yu-Chun Chen's personal Claude skills (Claude ports of the ChatGPT skills in this repo).",
+  "description": "Yu-Chun Chen's personal Claude skills: Claude ports of the ChatGPT skills in this repo, plus Claude-native skills (threads-radar).",
   "author": {
     "name": "Yu-Chun Chen"
   }

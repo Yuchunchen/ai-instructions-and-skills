@@ -31,7 +31,7 @@
 
 ## 狀態與治理
 
-- 2026-10-31：新增 `threads-radar`（Claude 原生，v2.0）。帳號層已有手動儲存的同名 skill（`anthropic-skills:threads-radar`）；本目錄合併到 `main` 後，組織同步會再出現 `yc-skills:threads-radar`，確認同步版可用後應停用帳號版，避免兩份並存。已合併（#9，015cee7）並登錄 Notion Skills Registry v1.9；合併後同一 session 的 skill 清單已同時出現 `yc-skills:threads-radar` 與 `anthropic-skills:threads-radar`，帳號版待使用者停用。
+- 2026-10-31：新增 `threads-radar`（Claude 原生，v2.0）。帳號層已有手動儲存的同名 skill（`anthropic-skills:threads-radar`）；本目錄合併到 `main` 後，組織同步會再出現 `yc-skills:threads-radar`，確認同步版可用後應停用帳號版，避免兩份並存。已合併（#9，015cee7）並登錄 Notion Skills Registry v1.9；合併後同一 session 的 skill 清單曾同時出現 `yc-skills:threads-radar` 與 `anthropic-skills:threads-radar`；同日經使用者授權，以瀏覽器將帳號版設為「已停用」（未移除），並確認 Yc skills 外掛已啟用、Skills 分頁共 8 件且含 `/threads-radar`。外掛與 marketplace 說明文字同步補上 threads-radar。
 
 - 2026-10-29：`conversation-review` Claude source 同步至 ChatGPT v1.4.1（來源 85fde15303e5dc5603899c2cbee4f8a55aa7cfd5）；含兩份 references（change-evidence 模式與離線回歸案例）。同次更正內容表 `write-like-yu-chun` 列（v1.6.0 @ 6375afa），並補上 Claude Code 兩步安裝寫法（原一步指令經核對仍有效，保留）。來源同步不代表 Claude 帳號或 plugin 已載入；實際安裝、觸發與 references 載入仍須另行確認。
 

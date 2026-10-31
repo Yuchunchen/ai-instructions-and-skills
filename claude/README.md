@@ -26,12 +26,12 @@
   - Claude Code：`/plugin install yc-skills --marketplace Yuchunchen/ai-instructions-and-skills`（一步完成；marketplace 尚未加入時會先加入）。等價的兩步寫法：`claude plugin marketplace add Yuchunchen/ai-instructions-and-skills`，再 `claude plugin install yc-skills@yc-ai-skills`（`<plugin>@<marketplace>`）。2026-10-29 依 Claude Code 2.1.312 的 `claude plugin install --help`、`claude plugin marketplace --help` 與 `claude plugin validate` 核對指令格式，未實際執行安裝。
   - `plugin.json` 刻意不設 `version`，讓安裝端依 commit 追蹤更新；validate 會提示缺 version，屬預期。
   - Plugin 內的 skill 名稱帶前綴（`yc-skills:<name>`）。確認同步版可用後，再停用先前手動上傳的同名 skill，避免同一 skill 出現兩份。
-  - 合併到 `main` 就會發佈到組織；修改仍須經 PR。
+  - 推送到 `main` 就會發佈到組織。一般修改直推 `main`；大改（重構資料夾、刪除或改名 skill、改 Architecture 層規則）先問使用者，同意後由 AI 開 PR 並自行合併（根目錄 README Change policy 第 9 條，2026-10-31 起）。
 - `agents/openai.yaml` 為 ChatGPT／Codex 專用，Claude 不讀取，本目錄不保留。Claude 沒有 `allow_implicit_invocation` 的對應機制，explicit-only 以 description 字句實現。
 
 ## 狀態與治理
 
-- 2026-10-31：新增 `threads-radar`（Claude 原生，v2.0）。帳號層已有手動儲存的同名 skill（`anthropic-skills:threads-radar`）；本目錄合併到 `main` 後，組織同步會再出現 `yc-skills:threads-radar`，確認同步版可用後應停用帳號版，避免兩份並存。Notion Skills Registry 尚未登錄。
+- 2026-10-31：新增 `threads-radar`（Claude 原生，v2.0）。帳號層已有手動儲存的同名 skill（`anthropic-skills:threads-radar`）；本目錄合併到 `main` 後，組織同步會再出現 `yc-skills:threads-radar`，確認同步版可用後應停用帳號版，避免兩份並存。已合併（#9，015cee7）並登錄 Notion Skills Registry v1.9；合併後同一 session 的 skill 清單已同時出現 `yc-skills:threads-radar` 與 `anthropic-skills:threads-radar`，帳號版待使用者停用。
 
 - 2026-10-29：`conversation-review` Claude source 同步至 ChatGPT v1.4.1（來源 85fde15303e5dc5603899c2cbee4f8a55aa7cfd5）；含兩份 references（change-evidence 模式與離線回歸案例）。同次更正內容表 `write-like-yu-chun` 列（v1.6.0 @ 6375afa），並補上 Claude Code 兩步安裝寫法（原一步指令經核對仍有效，保留）。來源同步不代表 Claude 帳號或 plugin 已載入；實際安裝、觸發與 references 載入仍須另行確認。
 

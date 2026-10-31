@@ -60,6 +60,7 @@ Before changing an existing instruction or Skill:
 6. Run relevant regression tests when behavior or routing changes.
 7. Do not claim performance, speed, or model improvements without testing.
 8. Do not assume GitHub source equals currently installed runtime state.
+9. Commit routine changes directly to `main`; the user is the only maintainer, and pushing to `main` publishes to the Claude organization. Use a pull request only for major changes (restructuring folders, deleting or renaming a Skill, or changing Architecture-level rules): ask the user first, and once the user agrees, the AI opens and merges the PR. Fetch `main` before pushing so a stale local copy on another machine is not pushed. (Adopted 2026-10-31.)
 
 ## Source and package maintenance
 
